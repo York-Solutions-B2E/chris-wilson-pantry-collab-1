@@ -1,0 +1,358 @@
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\appsettings.Development.json
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\appsettings.json
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.exe
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.deps.json
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.runtimeconfig.json
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.pdb
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Humanizer.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\projects\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.AssemblyInfo.cs
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cs
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cache
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.server.Microsoft.AspNetCore.StaticWebAssets.props
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.build.server.props
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.server.props
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.server.props
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets.pack.json
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets.build.json
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets.development.json
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\scopedcss\bundle\server.styles.css
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.csproj.CopyComplete
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.dll
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\refint\server.dll
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.pdb
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.genruntimeconfig.cache
+C:\projects\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\ref\server.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.AssemblyInfo.cs
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cs
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cache
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\refint\server.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.pdb
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\appsettings.Development.json
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\appsettings.json
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.exe
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.deps.json
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.runtimeconfig.json
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\server.pdb
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Humanizer.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Drawing.Common.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Runtime.Caching.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Security.Permissions.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\System.Windows.Extensions.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.server.Microsoft.AspNetCore.StaticWebAssets.props
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.build.server.props
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.server.props
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.server.props
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets.pack.json
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets.build.json
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\staticwebassets.development.json
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\scopedcss\bundle\server.styles.css
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.csproj.CopyComplete
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\server.genruntimeconfig.cache
+G:\Assignments\groupProject\optum-fs-asp-22-team-2\server\obj\Debug\net6.0\ref\server.dll
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.AssemblyInfo.cs
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cs
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cache
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.dll
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\refint\server.dll
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.pdb
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\appsettings.Development.json
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\appsettings.json
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\server.exe
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\server.deps.json
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\server.runtimeconfig.json
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\server.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\server.pdb
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Humanizer.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\System.Drawing.Common.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\System.Runtime.Caching.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\System.Security.Permissions.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\System.Windows.Extensions.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\staticwebassets\msbuild.server.Microsoft.AspNetCore.StaticWebAssets.props
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\staticwebassets\msbuild.build.server.props
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.server.props
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.server.props
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\staticwebassets.pack.json
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\staticwebassets.build.json
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\staticwebassets.development.json
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\scopedcss\bundle\server.styles.css
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.csproj.CopyComplete
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\server.genruntimeconfig.cache
+G:\Assignments\Group Project Redux\server\obj\Debug\net6.0\ref\server.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+G:\Assignments\Group Project Redux\server\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.AssemblyInfo.cs
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cs
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cache
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\refint\server.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.pdb
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\appsettings.Development.json
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\appsettings.json
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\server.exe
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\server.deps.json
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\server.runtimeconfig.json
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\server.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\server.pdb
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Humanizer.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\System.Drawing.Common.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\System.Runtime.Caching.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\System.Security.Permissions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\System.Windows.Extensions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\staticwebassets\msbuild.server.Microsoft.AspNetCore.StaticWebAssets.props
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\staticwebassets\msbuild.build.server.props
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.server.props
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.server.props
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\staticwebassets.pack.json
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\staticwebassets.build.json
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\staticwebassets.development.json
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\scopedcss\bundle\server.styles.css
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.csproj.CopyComplete
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\server.genruntimeconfig.cache
+G:\Assignments\Chris-Wilson-pantry-collab-#\server\obj\Debug\net6.0\ref\server.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\appsettings.Development.json
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\appsettings.json
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\server.exe
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\server.deps.json
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\server.runtimeconfig.json
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\server.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\server.pdb
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Humanizer.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\System.Drawing.Common.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\System.Runtime.Caching.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\System.Security.Permissions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\System.Windows.Extensions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.AssemblyInfo.cs
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cs
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.MvcApplicationPartsAssemblyInfo.cache
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\staticwebassets\msbuild.server.Microsoft.AspNetCore.StaticWebAssets.props
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\staticwebassets\msbuild.build.server.props
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.server.props
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.server.props
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\staticwebassets.pack.json
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\staticwebassets.build.json
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\staticwebassets.development.json
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\scopedcss\bundle\server.styles.css
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.csproj.CopyComplete
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\refint\server.dll
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.pdb
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\server.genruntimeconfig.cache
+G:\Assignments\Chris-Wilson-pantry-collab-1\server\obj\Debug\net6.0\ref\server.dll

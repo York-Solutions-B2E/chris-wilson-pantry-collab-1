@@ -1,0 +1,11 @@
+services:
+  database:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: Capstone
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SuperSecret1!
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./Database:/var/opt/mssql/data
