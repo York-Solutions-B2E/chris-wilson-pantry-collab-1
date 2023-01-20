@@ -10,9 +10,17 @@ import { UserService } from './Services/User/user.service';
 export class AppComponent {
   title = 'Family Recipies';
 
-  constructor(private auth: AuthenticationService, private user: UserService){
+  constructor(private auth: AuthenticationService, private userService: UserService){
     
-    auth.login("gravy", "string"); 
+    if(!auth.IsLoggedIn()){
+      console.log("not logged in"); 
+      auth.login("gravy", "string"); 
+    }
+
+    userService.getUser(); 
+
+    //auth.LogOut(); 
+    
 
     
     

@@ -12,9 +12,9 @@ export class AuthenticationService {
 
 	constructor(private http: HttpClient) { }
 
-	login(email: string, password: string){
+	login(username: string, password: string){
 		console.log("logging in..."); 
-		this.http.post<TokenDTO>(this.endPoint, {email, password} ).subscribe({
+		this.http.post<TokenDTO>(this.endPoint, {username, password} ).subscribe({
 			next: token => this.SetSession(token), 
 			error: err => console.log(err), 
 			complete: () => {}
@@ -51,6 +51,14 @@ export class AuthenticationService {
 		}
 
 		//its a real date, its not in the past, user is logged in 
+
+		//check if there is a token
+		let token = localStorage.getItem("token"); 
+		if(token == null){
+			return false; 
+		}
+		
+		//there is a token and it isn't expired
 		return true; 
 	}
 
