@@ -1,5 +1,6 @@
 //this is to hold all the application settings in one place
 export class AppSettings{
+    //backend end points 
     public static readonly API_Endpoint = "https://localhost"; 
 
     public static readonly API_Port = "7103";
@@ -11,4 +12,8 @@ export class AppSettings{
     public static GetAPI(){
         return this.API_Endpoint + ":" + this.API_Port;
     }
+
+
+    //site data
+    public static readonly Title:string = "Family Pantry App"
 }

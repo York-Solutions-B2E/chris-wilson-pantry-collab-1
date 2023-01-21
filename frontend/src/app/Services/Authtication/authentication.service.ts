@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { TokenDTO } from 'src/app/dto/TokenDTO';
 import { HttpClient } from '@angular/common/http';
 import { AppSettings } from 'src/app/app.settings';
+import { BehaviorSubject, map, Observable } from 'rxjs';
+import { User } from 'src/app/Models/User';
 
 @Injectable({
 	providedIn: 'root'
@@ -9,69 +10,51 @@ import { AppSettings } from 'src/app/app.settings';
 export class AuthenticationService {
 
 	private endPoint = AppSettings.API_Endpoint + ":" + AppSettings.API_Port + AppSettings.API_LoginEndPoint; 
+	private currentUserSubject: BehaviorSubject<User|null>;
+	
+	constructor(private http: HttpClient) { 
+		
+		this.currentUserSubject = new BehaviorSubject<User|null>(null);
 
-	constructor(private http: HttpClient) { }
+		let test = localStorage.getItem('currentUser'); 
 
-	login(username: string, password: string){
+		if(test != null){
+			this.currentUserSubject.next(JSON.parse(test)); 
+		}
+	}
+
+	login(username: string, password: string):Observable<User>{
+		
 		console.log("logging in..."); 
-		this.http.post<TokenDTO>(this.endPoint, {username, password} ).subscribe({
-			next: token => this.SetSession(token), 
-			error: err => console.log(err), 
-			complete: () => {}
-		}); 
+		return this.http.post<User>(this.endPoint, {username, password} ).pipe(
+			map(response => {
+				//save current user 
+				localStorage.setItem('currentUser', JSON.stringify(response)); 
+				this.currentUserSubject.next(response); 
+				return response; 
+			})
+		);
 	}
 
-	public SetSession(t: TokenDTO) {
-		console.log("logged in : ");
-		console.log(t);  
-		localStorage.setItem("token", t.token);
-		localStorage.setItem("token_exp", t.expires);
-	}
 
 	public LogOut() {
-		localStorage.removeItem("token");
-		localStorage.removeItem("token_exp");
+		localStorage.removeItem("currentUser");
 	}
+
+	public get currentUserValue(): User|null {
+
+        return this.currentUserSubject.value;
+    }
 
 	public IsLoggedIn(): boolean {
-		//get date from local storage 
-		let expireDate = localStorage.getItem("token_exp"); 
+		let user = this.currentUserValue; 
 
-		//check to is its null 
-		if(expireDate === null){
-			return false;  
+		if(user){
+			if(user.Token && user.Token.Expires < new Date()){
+				return true; 
+			}
 		}
+		return false; 
 
-		//turn it into a time object
-		let time = new Date(expireDate); 
-
-		//check if its in the past
-		if(time < new Date()){
-			return false; 
-		}
-
-		//its a real date, its not in the past, user is logged in 
-
-		//check if there is a token
-		let token = localStorage.getItem("token"); 
-		if(token == null){
-			return false; 
-		}
-		
-		//there is a token and it isn't expired
-		return true; 
-	}
-
-	public GetExpiration(): Date{
-		//get date from local storage 
-		let expireDate = localStorage.getItem("token_exp"); 
-
-		//check to is its null 
-		if(expireDate === null){
-			//set way in the past
-			return new Date(0); 
-		}
-
-		return new Date(expireDate); 
 	}
 }
