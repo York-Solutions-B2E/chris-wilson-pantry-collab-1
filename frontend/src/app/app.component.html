@@ -1,1 +1,4 @@
-<app-login></app-login>
+<app-login *ngIf="ui.pageStatus('login_page')"></app-login>
+
+
+    <ng-template [ngIf]="ui.pageStatus('home_page')"><div>Home Page</div></ng-template>

@@ -10,6 +10,8 @@ import { User } from 'src/app/Models/User';
 export class AuthenticationService {
 
 	private endPoint = AppSettings.API_Endpoint + ":" + AppSettings.API_Port + AppSettings.API_LoginEndPoint; 
+
+	//this has to be null because if a user isn't logged it will be null
 	private currentUserSubject: BehaviorSubject<User|null>;
 	
 	constructor(private http: HttpClient) { 
@@ -28,14 +30,21 @@ export class AuthenticationService {
 		console.log("logging in..."); 
 		return this.http.post<User>(this.endPoint, {username, password} ).pipe(
 			map(response => {
-				//save current user 
+				//save current user in local storage
 				localStorage.setItem('currentUser', JSON.stringify(response)); 
+
+				//set the object 
 				this.currentUserSubject.next(response); 
+
+				//return the observable 
 				return response; 
 			})
 		);
 	}
 
+	public getUserSubject():BehaviorSubject<User|null>{
+		return this.currentUserSubject; 
+	}
 
 	public LogOut() {
 		localStorage.removeItem("currentUser");

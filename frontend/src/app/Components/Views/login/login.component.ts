@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs';
 
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
+import { UIService } from 'src/app/Services/UI/ui.service';
 
 @Component({
 	selector: 'app-login',
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit  {
 	constructor(
 		private auth: AuthenticationService,
 		private formBuilder: FormBuilder,
+		private ui: UIService
 		) {
 
 	}
@@ -42,8 +44,7 @@ export class LoginComponent implements OnInit  {
 		).pipe(first())
 		.subscribe({
 			next: response => {
-				console.log("you have logged in"); 
-				console.log(this.auth.currentUserValue); 
+				 this.ui.setPage("home_page"); 
 			}, 
 			error: error => {
 				console.error(error); 
