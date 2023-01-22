@@ -12,15 +12,8 @@ import { UserService } from './Services/User/user.service';
 })
 export class AppComponent {
 
-  constructor(private auth: AuthenticationService, private userService: UserService, private titleService: Title, public ui: UIService ){
-    
-    titleService.setTitle(AppSettings.Title); 
-
-   
-    console.log("login: ", ui.pageStatus('login_page')); 
-    
-
-    
+  constructor(private auth: AuthenticationService, private userService: UserService,  private titleService: Title, public ui: UIService ){
+    console.log(ui.pageStatus("login_page"));
     
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UIService } from 'src/app/Services/UI/ui.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(public ui:UIService){
+    
+  }
 }

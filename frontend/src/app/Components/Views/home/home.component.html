@@ -1,1 +1,14 @@
-<p>home works!</p>
+<div id="MainWrapper">
+    <div id="userBar">
+        <app-userbar></app-userbar>
+    </div>
+    
+    <div id="MainArea">
+        <app-recipes *ngIf="ui.getArea('recipes')"></app-recipes>
+        <app-add-recipe *ngIf="ui.getArea('add_recipes')"></app-add-recipe>
+        
+    </div>
+
+    
+
+</div>

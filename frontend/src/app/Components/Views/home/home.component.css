@@ -1,0 +1,13 @@
+#MainWrapper{
+    width: 1440px;
+    margin: auto; 
+}
+
+#userBar{
+    height: 35px;
+}
+
+#MainArea{
+    width: 1440px;
+    background-color: darkslateblue;
+}

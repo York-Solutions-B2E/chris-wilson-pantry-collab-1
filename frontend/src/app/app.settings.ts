@@ -15,5 +15,7 @@ export class AppSettings{
 
 
     //site data
-    public static readonly Title:string = "Family Pantry App"
+    public static readonly HomeTitle:string = "Family Pantry App";
+    public static readonly LoginPageTitle:string = "Login";
+    public static readonly RegisterPageTitle:string = "Create An Account";
 }
