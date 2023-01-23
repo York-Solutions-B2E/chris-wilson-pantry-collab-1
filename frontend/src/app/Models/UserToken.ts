@@ -1,6 +1,6 @@
 
 
 export interface UserToken{
-    Value: string;
-    Expires: Date;
+    value: string;
+    expires: Date;
 }

@@ -21,10 +21,10 @@ export class AuthInterceptor implements HttpInterceptor {
         let currentUser = this.authService.currentUserValue; 
 
         //check if there is a token
-        if (currentUser && currentUser.Token && currentUser.Token.Value) {
+        if (currentUser && currentUser.token && currentUser.token.value) {
             const cloned = req.clone({
                 headers: req.headers.set("Authorization",
-                    "Bearer " + currentUser.Token.Value)
+                    "Bearer " + currentUser.token.value)
             });
 
             return next.handle(cloned);

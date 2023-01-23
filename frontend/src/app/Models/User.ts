@@ -2,11 +2,11 @@ import { UserToken } from "./UserToken";
 
 
 export interface User {
-    Username: string;
-    FirstName: string;
-    LastLoggedIn: Date;
-    FamilyName: string;
-    Created: Date;
-    Title: string;
-    Token: UserToken;
+    username: string;
+    firstName: string;
+    lastLoggedIn: Date;
+    familyName: string;
+    created: Date;
+    title: string;
+    token: UserToken;
 }

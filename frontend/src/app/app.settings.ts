@@ -6,6 +6,10 @@ export class AppSettings{
     public static readonly API_Port = "7103";
 
     public static readonly API_LoginEndPoint = "/api/Authentication/login";  
+    
+    //ingredients
+    public static readonly API_GetIngredient = "/api/Ingre";  
+    public static readonly API_AddIngredient = "/api/Ingre/create";  
 
     public static readonly API_User = "/api/User"; 
 

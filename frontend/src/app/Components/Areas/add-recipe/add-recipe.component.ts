@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Dictionary } from 'src/app/Models/Dictionary';
 import { Ingredients } from 'src/app/Models/Ingredients';
+import { IngSection } from 'src/app/Models/IngSection';
 import { UIService } from 'src/app/Services/UI/ui.service';
 
 @Component({
@@ -10,30 +11,36 @@ import { UIService } from 'src/app/Services/UI/ui.service';
 })
 export class AddRecipeComponent {
 
-  public SectionCount:number = 1; 
-  public IngredientSection: Dictionary<Ingredients[]> = {
-    "main": [],
-  }
+  
+  public IngredientSections: IngSection[] = []; 
 
   public Servings = 4; 
+
+  public Ingredients: Ingredients[] = []; 
+
+
   
   constructor(public ui:UIService){
 
+    //main area 
+    //this.AddSection("Ingredients"); 
   }
 
   public AddSection(name:string):void {
-    //only one section named main allowed
-    if(name === 'main') return;
     
-    this.IngredientSection[name] = []; 
-    this.SectionCount++; 
+    this.IngredientSections.push({Name: name, Ingredients: []})
   }
 
   public RemoveSection(name: string): void {
-    //can't delete main section
-    if(name === 'main') return; 
+    this.IngredientSections.forEach((element, index) => {
+      if(element.Name === name){
+        this.IngredientSections.splice(index, 1); 
+        return
+      }
+    })
+  }
 
-    delete this.IngredientSection[name]; 
-    this.SectionCount--; 
+  public AddIng(){
+
   }
 }

@@ -1,1 +1,16 @@
-<p>add-recipe works!</p>
+<h2>Create A New Recipe</h2>
+<!-- <div (click)="">
+    Add Ingredient
+</div> -->
+
+<ul>
+    <li *ngFor=" let section of IngredientSections">
+        {{section.Name}}
+        <ul>
+            <li *ngFor=" let ing of section.Ingredients">
+                <div><input type="text"></div>
+            </li>
+        </ul>
+    
+    </li>
+</ul>
