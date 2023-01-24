@@ -4,6 +4,7 @@ using server.DataTransferObj;
 using server.Models;
 using server.Service.Roles;
 using server.Service.Token;
+using server.Service.Users;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -16,18 +17,26 @@ namespace server.Service.Auth
         private readonly BackendServerContext _context;
         private readonly ITokenService _tokenServices;
         private readonly IRoleService _roleService;
+        private readonly IUserService _userService; 
 
 
-        public AuthService(BackendServerContext context, ITokenService tokenService, IRoleService roleService)
+        public AuthService(
+            BackendServerContext context, 
+            ITokenService tokenService, 
+            IRoleService roleService, 
+            IUserService userService
+            )
         {
             _context = context;
 
             _tokenServices = tokenService;
 
             _roleService = roleService;
+
+            _userService = userService;
         }
 
-        public JWTTokenResponseDTO LoginUser(UserLoginDTO userDTO)
+        public UserDTO LoginUser(UserLoginDTO userDTO)
         {
             try
             {
@@ -81,8 +90,17 @@ namespace server.Service.Auth
                     claims.Add(new Claim(ClaimTypes.Role, role.Name));
                 }
 
-                //create the token and return it
-                return _tokenServices.createToken(claims);
+                //create the token 
+                JWTTokenResponseDTO token = _tokenServices.createToken(claims);
+
+
+                //get the user info
+                UserDTO reUser = this._userService.GetUser(user.Id);
+
+                //attach the token
+                reUser.Token = token;
+
+                return reUser; 
 
 
             }catch(DbUpdateException ex)

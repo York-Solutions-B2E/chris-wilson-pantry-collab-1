@@ -9,7 +9,11 @@ export class AppSettings{
     
     //ingredients
     public static readonly API_GetIngredient = "/api/Ingre";  
-    public static readonly API_AddIngredient = "/api/Ingre/create";  
+    public static readonly API_AddIngredient = "/api/Ingre/create"; 
+    
+    //pantryItems
+    public static readonly API_GetPantyItems = "/api/Pantry/"; 
+    public static readonly API_AddPantyItems = "/api/Pantry/create"; 
 
     public static readonly API_User = "/api/User"; 
 

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AppSettings } from 'src/app/app.settings';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { User } from 'src/app/Models/User';
+import { UIService } from '../UI/ui.service';
 
 @Injectable({
 	providedIn: 'root'
@@ -22,6 +23,8 @@ export class AuthenticationService {
 
 		if (test != null) {
 			this.currentUserSubject.next(JSON.parse(test));
+
+			console.log(this.currentUserValue); 
 		}
 	}
 
@@ -32,7 +35,7 @@ export class AuthenticationService {
 		console.log("logging in...");
 		return this.http.post<User>(this.endPoint, { username, password }).pipe(
 			map(response => {
-				//console.log(response); 
+				console.log(response); 
 				//save current user in local storage
 				localStorage.setItem('currentUser', JSON.stringify(response));
 

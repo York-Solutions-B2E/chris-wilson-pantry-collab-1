@@ -76,11 +76,17 @@ namespace server.Service.Users
         {
 
             var query = from u in _context.Users
+                        join f in _context.Families on u.FamilyId equals f.Id
                         where u.Id == Id
                         select new UserDTO
                         {
-                            Id = u.Id,
+                            Username = u.Username,
+                            FirstName = u.FirstName,
                             LastLoggedIn= u.LastLoggedIn,
+                            FamilyName = f.FamilyName,
+                            FamilyId = f.Id,
+                            Created = f.Created,
+                            Title = f.Title,
                         };
             var user = query.FirstOrDefault(); 
             
@@ -101,7 +107,7 @@ namespace server.Service.Users
                         select u;
             var result = query.FirstOrDefault(); */
 
-            var user = _context.Users.SingleOrDefault(x => x.Username.Equals(username));
+            var user = _context.Users?.SingleOrDefault(x => x.Username.Equals(username));
 
             if (user == null)
             {

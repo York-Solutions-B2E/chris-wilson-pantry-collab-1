@@ -34,7 +34,7 @@ namespace server.Controllers
             try
             {
                 //attempt to get a token
-                JWTTokenResponseDTO token = _authService.LoginUser(user); 
+                UserDTO token = _authService.LoginUser(user); 
 
                 return Ok(token); 
 

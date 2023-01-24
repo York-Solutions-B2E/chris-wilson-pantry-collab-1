@@ -13,8 +13,12 @@ import { AuthenticationService } from '../Authtication/authentication.service';
 })
 export class UIService {
 
+	//loading
+	loadingIngredients = true;
+	loadingPantryItems = true; 
+
+
 	public isUserLoggedIn: boolean = false;
-	private user: BehaviorSubject<User | null>;
 	//main areas
 
 
@@ -34,7 +38,7 @@ export class UIService {
 
 
 	constructor(private auth: AuthenticationService, private titleService: Title) {
-		this.user = auth.getUserSubject();
+
 
 		//check if user is still logged in and has a valid token
 		if (this.auth.currentUserValue !== null && new Date(this.auth.currentUserValue.token.expires) < new Date()) {
@@ -54,6 +58,12 @@ export class UIService {
 
 		}
 
+	}
+
+
+	//if everything is done load return true
+	public doneLoadingEverything(): boolean{
+		return !this.loadingIngredients && !this.loadingPantryItems; 
 	}
 
 

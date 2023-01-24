@@ -2,7 +2,7 @@
 {
     public class JWTTokenResponseDTO
     {
-        public string? Token { get; set; }
+        public string? Value { get; set; }
 
         public DateTime? Expires { get; set; }
     }

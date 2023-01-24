@@ -15,9 +15,9 @@ namespace server.Data
         public DbSet<Friend>? Friends { get; set; }
         public DbSet<FriendRequest>? FriendRequests { get; set; }
         public DbSet<Ingredient>? Ingredients { get; set; }
-        public DbSet<IngredientData>? IngredientData { get; set; }
         public DbSet<Recipe>? Recipes { get; set; }
         public DbSet<RecipeIngredient>? RecipeIngredients { get; set; }
+        public DbSet<Pantry>? Pantries { get; set; }
        
     
 

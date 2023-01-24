@@ -1,8 +1,8 @@
 
 
-export interface IngreDTO{
-    Id: number|null; 
-    Name: string; 
-    Description: string;
-    Calories: number; 
+export interface IngreDTO {
+	id: number | null;
+	name: string;
+	description: string;
+	calories: number;
 }

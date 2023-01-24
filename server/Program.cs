@@ -11,6 +11,8 @@ using server.Service.Auth;
 using server.Service.Roles;
 using server.Service.Users;
 using server.Service.FamilyServices;
+using server.Service.Ingredients;
+using server.Service.PantryServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -66,6 +68,8 @@ builder.Services.AddTransient<ITokenService, TokenService>();
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IRoleService, RoleService>();
 builder.Services.AddTransient<IFamilyService, FamilyService>();
+builder.Services.AddTransient<IIngredientsService, IngredientsService>();
+builder.Services.AddTransient<IPantryService, PantryServices>();
 
 // For Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()

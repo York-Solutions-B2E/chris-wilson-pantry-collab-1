@@ -46,7 +46,7 @@ namespace server.Service.Token
 
             return new JWTTokenResponseDTO
             {
-                Token = tokenString,
+                Value = tokenString,
                 Expires = expiresAt
             };
 

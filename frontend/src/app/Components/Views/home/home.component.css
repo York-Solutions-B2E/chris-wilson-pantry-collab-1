@@ -1,13 +1,28 @@
-#MainWrapper{
+#MainWrapper {
     width: 1440px;
-    margin: auto; 
+    margin: auto;
 }
 
-#userBar{
+#userBar {
     height: 35px;
+
 }
 
-#MainArea{
+
+
+#MainArea {
     width: 1440px;
-    background-color: darkslateblue;
+    display: flex;
+    flex-direction: row;
+}
+
+#Menu {
+    width: 15%;
+    height: 100vh;
+    background-color: green;
+}
+
+#Area {
+    width: 85%;
+    height: 100vh;
 }

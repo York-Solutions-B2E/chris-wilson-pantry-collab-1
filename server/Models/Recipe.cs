@@ -11,6 +11,8 @@ namespace server.Models
 
         public string? Description { get; set; }
 
+        public int? servings { get; set; }
+
         public string? Directions { get; set; }
 
         [ForeignKey("Family")]

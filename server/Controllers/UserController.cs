@@ -43,18 +43,21 @@ namespace server.Controllers
         [HttpGet]
         public IActionResult GetUser()
         {
-            //get the user id from the token
-            string id = User.FindFirstValue(ClaimTypes.NameIdentifier); 
             
-            if(id == null)
-            {
-                return BadRequest("User isn't logged in."); 
-            }
+            try{
+                //get the user id from the token
+                string id = User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            
+                if(id == null)
+                {
+                    return BadRequest("User isn't logged in."); 
+                }
 
-            try
-            {
+            
                 UserDTO user = _userService.GetUser(Int32.Parse(id));
+
                 return Ok(user);
+
             }catch(Exception ex)
             {
                 return BadRequest(ex.Message); 

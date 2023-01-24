@@ -1,0 +1,18 @@
+
+<mat-label>Add A Ingredient To Your Pantry</mat-label>
+  <mat-select placeholder="Select An Ingredient" (selectionChange)="onSelected($event.value)">
+    <mat-option *ngFor="let item of IngreService.GetIngredients" [value]="item.id">
+      {{item.name}}
+    </mat-option>
+  </mat-select>
+
+  <label for="add-i-calories">Amount In Grams</label>
+<input id="add-i-calories" [(ngModel)]="amountToAdd" type="number">
+
+<br/>
+
+<button mat-button (click)="Cancel()">Cancel</button>
+  <button mat-button (click)="Ok()" cdkFocusInitial>Ok</button>
+
+
+ 

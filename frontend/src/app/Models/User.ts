@@ -6,6 +6,7 @@ export interface User {
     firstName: string;
     lastLoggedIn: Date;
     familyName: string;
+    familyId: number; 
     created: Date;
     title: string;
     token: UserToken;

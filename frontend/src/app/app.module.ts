@@ -12,6 +12,11 @@ import { UserbarComponent } from './Components/userbar/userbar.component';
 import { RecipesComponent } from './Components/Areas/recipes/recipes.component';
 import { RecipeCardComponent } from './Components/recipe-card/recipe-card.component';
 import { AddRecipeComponent } from './Components/Areas/add-recipe/add-recipe.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddIngredientDialogComponent } from './Components/add-ingredient-dialog/add-ingredient-dialog.component';
+import { AddPantryItemDialogComponent } from './Components/add-pantry-item-dialog/add-pantry-item-dialog.component';
+import {MatSelectModule} from '@angular/material/select';
+import { PantryComponent } from './Components/Areas/pantry/pantry.component';
 
 
 @NgModule({
@@ -23,14 +28,19 @@ import { AddRecipeComponent } from './Components/Areas/add-recipe/add-recipe.com
     UserbarComponent,
     RecipesComponent,
     RecipeCardComponent,
-    AddRecipeComponent
+    AddRecipeComponent,
+    AddIngredientDialogComponent,
+    AddPantryItemDialogComponent,
+    PantryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule, 
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true } ],
   bootstrap: [AppComponent]

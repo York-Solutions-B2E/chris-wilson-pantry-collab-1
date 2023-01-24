@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { first, map } from 'rxjs';
+import { BehaviorSubject, first, map } from 'rxjs';
 import { AppSettings } from 'src/app/app.settings';
 import { IngreDTO } from 'src/app/dto/IngreDTO';
 import { UIService } from '../UI/ui.service';
@@ -9,27 +9,47 @@ import { UIService } from '../UI/ui.service';
 	providedIn: 'root'
 })
 export class IngredService {
-	private endPoint = AppSettings.API_Endpoint + ":" + AppSettings.API_Port;
-	private Ingredients: IngreDTO[] = [];
+	private endPoint = AppSettings.GetAPI(); 
+	private Ingredients: BehaviorSubject<IngreDTO[]> = new BehaviorSubject<IngreDTO[]>([]);
+
+
 
 	constructor(private http: HttpClient, private ui: UIService) {
-		
+
+		//get the ingredients 
+		//this needs to only happen once so do it in the constructor 
 		this.http.get<IngreDTO[]>(this.endPoint + AppSettings.API_GetIngredient).pipe(
 			first(),
-			map( response => {
-				this.Ingredients = response; 
-				return response; 
+			map(response => {
+				console.log(response);
+				this.Ingredients.next(response);
+
+				//done loading the ingredients
+				this.ui.loadingIngredients = false; 
+				return response;
 			})
-		).subscribe();
-	 }
+		).subscribe({
+			error: error => console.error(error) 
+		});
+	}
 
 	public AddIngredient(Ingre: IngreDTO) {
 		return this.http.post<IngreDTO>(this.endPoint + AppSettings.API_AddIngredient, Ingre).pipe(
+			first(),
 			map(response => {
-				this.Ingredients.push(response); 
+				console.log(response); 
 
-				return response; 
+				//add the new item to the list
+				const currentValue = this.Ingredients.value; 
+				const newValue = [...currentValue, response]; 
+				this.Ingredients.next(newValue);
+
+				return response;
 			})
 		);
+	}
+
+	public get GetIngredients(){
+		return this.Ingredients.value; 
 	}
 }

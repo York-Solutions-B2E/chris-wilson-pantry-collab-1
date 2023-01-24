@@ -36,6 +36,10 @@ namespace server.Migrations
                     b.Property<string>("FamilyName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Families");
@@ -96,18 +100,18 @@ namespace server.Migrations
                     b.Property<decimal?>("Calories")
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal?>("Weight")
-                        .HasColumnType("decimal(18,4)");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Ingredients");
                 });
 
-            modelBuilder.Entity("server.Models.IngredientData", b =>
+            modelBuilder.Entity("server.Models.Pantry", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -115,21 +119,21 @@ namespace server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal?>("Amount")
+                        .HasColumnType("decimal(18,4)");
 
-                    b.Property<bool?>("IsLiquid")
-                        .HasColumnType("bit");
+                    b.Property<DateTime?>("Expires")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("FamilyId")
+                        .HasColumnType("int");
 
-                    b.Property<decimal?>("VolumeCupGrams")
-                        .HasColumnType("decimal(10,5)");
+                    b.Property<int?>("Ingredient")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("IngredientData");
+                    b.ToTable("Pantries");
                 });
 
             modelBuilder.Entity("server.Models.Recipe", b =>
@@ -146,8 +150,14 @@ namespace server.Migrations
                     b.Property<string>("Directions")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("Family")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("servings")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

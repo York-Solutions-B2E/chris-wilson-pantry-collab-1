@@ -1,0 +1,15 @@
+<p>Add A Ingredient</p>
+
+<label for="add-i-name">Ingredient Name</label>
+<input id="add-i-name" [(ngModel)]="name" type="text">
+
+<label for="add-i-desc">Description</label>
+<input id="add-i-desc" [(ngModel)]="desc" type="text">
+
+<label for="add-i-calories">Calories Per Gram</label>
+<input id="add-i-calories" [(ngModel)]="calories" type="number">
+
+<br/>
+
+<button mat-button (click)="Cancel()">Cancel</button>
+  <button mat-button (click)="Ok()" cdkFocusInitial>Ok</button>

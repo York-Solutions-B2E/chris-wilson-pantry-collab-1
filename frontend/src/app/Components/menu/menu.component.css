@@ -1,0 +1,16 @@
+.MenuParent {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn {
+	align-items: stretch;
+	padding: 5px 10px;
+	background-color: darkgrey;
+	cursor: pointer;
+}
+
+.btn:hover {
+
+	background-color: grey;
+}
