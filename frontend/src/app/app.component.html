@@ -1,10 +1,6 @@
 
-<div *ngIf="ui.doneLoadingEverything(); else elseBlock">
     <app-login *ngIf="ui.pageStatus('login_page')"></app-login>
 
 
-<app-home *ngIf="ui.pageStatus('home_page')"></app-home>
-
-</div>
-<ng-template #elseBlock>Loading...</ng-template>
+    <app-home *ngIf="ui.pageStatus('home_page')"></app-home>
 

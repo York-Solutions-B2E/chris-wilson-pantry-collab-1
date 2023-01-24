@@ -48,7 +48,7 @@ export class UIService {
 		}
 
 		this.isUserLoggedIn = !!auth.currentUserValue;
-
+console.log("...", this.isUserLoggedIn)
 		if (!this.isUserLoggedIn) {
 			//user isn't logged in
 			this.setPage("login_page");
