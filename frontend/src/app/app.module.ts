@@ -19,6 +19,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { PantryComponent } from './Components/Areas/pantry/pantry.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import { PantryComponent } from './Components/Areas/pantry/pantry.component';
     AddRecipeComponent,
     AddIngredientDialogComponent,
     AddPantryItemDialogComponent,
-    PantryComponent
+    PantryComponent,
   ],
   imports: [
     BrowserModule,

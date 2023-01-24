@@ -156,7 +156,7 @@ namespace server.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("servings")
+                    b.Property<int?>("Servings")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

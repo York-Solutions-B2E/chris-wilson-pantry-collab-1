@@ -13,6 +13,7 @@ using server.Service.Users;
 using server.Service.FamilyServices;
 using server.Service.Ingredients;
 using server.Service.PantryServices;
+using server.Service.RecipeService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,6 +71,7 @@ builder.Services.AddTransient<IRoleService, RoleService>();
 builder.Services.AddTransient<IFamilyService, FamilyService>();
 builder.Services.AddTransient<IIngredientsService, IngredientsService>();
 builder.Services.AddTransient<IPantryService, PantryServices>();
+builder.Services.AddTransient<IRecipeService, RecipeService>();
 
 // For Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()

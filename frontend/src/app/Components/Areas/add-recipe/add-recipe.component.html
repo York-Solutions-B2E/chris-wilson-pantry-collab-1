@@ -1,16 +1,43 @@
 <h2>Create A New Recipe</h2>
-<!-- <div (click)="">
-    Add Ingredient
-</div> -->
+<div class="wrapper">
 
-<ul>
-    <li *ngFor=" let section of IngredientSections">
-        {{section.Name}}
-        <ul>
-            <li *ngFor=" let ing of section.Ingredients">
-                <div><input type="text"></div>
-            </li>
-        </ul>
-    
-    </li>
-</ul>
+    <div class="left">
+
+
+        <label for="Recipe-Name">Recipe Name</label>
+        <input id="Recipe-Name" [(ngModel)]="recipeName" type="text" (ngModelChange)="inputChanged()">
+
+
+        <div>
+            <mat-label>Add A Ingredient To Your Pantry</mat-label>
+            <mat-select placeholder="Select An Ingredient" (selectionChange)="onSelected($event.value)">
+                <mat-option *ngFor="let item of IngreService.GetIngredients" [value]="item.id">
+                    {{item.name}}
+                </mat-option>
+            </mat-select>
+            <label for="add-i-calories">Calories Per Gram</label>
+            <input id="add-i-calories" [(ngModel)]="amountToAdd" type="number">
+
+            <button (click)="addIngredient()">Add</button>
+        </div>
+
+        <div>
+            <ul>
+                <li *ngFor="let item of Ingredients">{{item.name}} : {{item.amount}} grams</li>
+            </ul>
+
+            <textarea [(ngModel)]="directions" name="directions" id="directions" cols="30" rows="10"></textarea>
+        </div>
+
+        <button (click)="save()">Save Recipe</button>
+    </div>
+    <div>
+        reddit search:
+        <div *ngFor="let red of redditResults">
+            <a href="{{red.data.url}}" target="_blank">{{red.data.title}}</a>
+
+        </div>
+    </div>
+
+
+</div>

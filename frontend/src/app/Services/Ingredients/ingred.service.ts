@@ -10,7 +10,7 @@ import { UIService } from '../UI/ui.service';
 })
 export class IngredService {
 	private endPoint = AppSettings.GetAPI(); 
-	private Ingredients: BehaviorSubject<IngreDTO[]> = new BehaviorSubject<IngreDTO[]>([]);
+	public Ingredients: BehaviorSubject<IngreDTO[]> = new BehaviorSubject<IngreDTO[]>([]);
 
 
 

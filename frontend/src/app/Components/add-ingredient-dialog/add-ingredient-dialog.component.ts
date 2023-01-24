@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { first } from 'rxjs';
 import { IngredService } from 'src/app/Services/Ingredients/ingred.service';
 
 @Component({
@@ -23,7 +24,7 @@ export class AddIngredientDialogComponent {
 	}
 
 	public Ok() {
-		this.IngreService.AddIngredient({id: 0, name: this.name, description: this.desc, calories: this.calories}).subscribe({
+		this.IngreService.AddIngredient({id: 0, name: this.name, description: this.desc, calories: this.calories}).pipe(first()).subscribe({
 			next: resp => {
 
 			}, 
