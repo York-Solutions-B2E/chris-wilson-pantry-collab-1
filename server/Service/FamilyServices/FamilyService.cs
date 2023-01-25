@@ -14,7 +14,7 @@ namespace server.Service.FamilyServices
             _context = context;
         }
 
-        public void CreateFamily(NewFamilyDTO newFamilyDTO)
+        public Family CreateFamily(NewFamilyDTO newFamilyDTO)
         {
             try
             {
@@ -24,9 +24,12 @@ namespace server.Service.FamilyServices
                 };
 
                 family.Created = DateTime.UtcNow;
+                family.Title = ""; //this was for something but the idea was put on hold. Nulls not allowed;
 
                 _context.Families?.Add(family); 
-                _context.SaveChanges(); 
+                _context.SaveChanges();
+
+                return family; 
 
             }catch(Exception ex)
             {

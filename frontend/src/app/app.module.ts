@@ -18,6 +18,7 @@ import { AddPantryItemDialogComponent } from './Components/add-pantry-item-dialo
 import {MatSelectModule} from '@angular/material/select';
 import { PantryComponent } from './Components/Areas/pantry/pantry.component';
 import { RecipeComponent } from './Components/Areas/recipe/recipe.component';
+import { RegisterFamilyComponent } from './Components/Views/register-family/register-family.component';
 
 
 
@@ -35,6 +36,7 @@ import { RecipeComponent } from './Components/Areas/recipe/recipe.component';
     AddPantryItemDialogComponent,
     PantryComponent,
     RecipeComponent,
+    RegisterFamilyComponent,
   ],
   imports: [
     BrowserModule,

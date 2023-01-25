@@ -20,9 +20,7 @@ namespace server.Controllers
         {
             try
             {
-                _familyService.CreateFamily(familyDTO);
-
-                return Ok();
+                return Ok(_familyService.CreateFamily(familyDTO));
             }
             catch (Exception ex)
             {

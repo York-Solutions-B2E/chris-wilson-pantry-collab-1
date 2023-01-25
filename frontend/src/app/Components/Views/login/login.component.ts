@@ -36,8 +36,6 @@ export class LoginComponent implements OnInit  {
 
 
 	onSubmit(){
-
-
 		this.auth.login(
 			this.loginForm.controls.username.value || "",
 			this.loginForm.controls.password.value || ""
@@ -52,5 +50,8 @@ export class LoginComponent implements OnInit  {
 		})
 	}
 
+	registerFamily(){
+		this.ui.setPage("registerFamily"); 
+	}
 
 }

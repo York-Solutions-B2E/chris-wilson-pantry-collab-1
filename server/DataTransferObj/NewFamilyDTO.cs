@@ -2,6 +2,7 @@
 {
     public class NewFamilyDTO
     {
-        public string FamilyName { get; set; }
+
+        public string? FamilyName { get; set; }
     }
 }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { first, map, Subject } from 'rxjs';
 import { AppSettings } from 'src/app/app.settings';
 import { ErrorMessage } from 'src/app/dto/errorMessageDTO';
+import { NewUserDTO } from 'src/app/dto/NewUserDTO';
 import { User } from 'src/app/Models/User';
 
 @Injectable({
@@ -15,22 +16,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  public getUser(){
-    
-    return this.http.get<User>(this.url); 
-
-    // this.http.get<UserDTO>(this.url).subscribe({
-    //   next: res => {
-    //     this.user = new User(res.Username, res.FirstName, res.LastLoggedIn, res.FamilyName, res.Created, res.Title); 
-
-    //     observer.next(this.user); 
-    //   },
-    //   error: error => {
-    //     errorObserver.next(error); 
-    //     //Todo: this
-    //   },
-
-    //   complete: () => {}
-    // })
+  public createUser(userData: NewUserDTO){
+    return this.http.post(AppSettings.GetAPI() + AppSettings.API_CreateUser, userData); 
   }
 }

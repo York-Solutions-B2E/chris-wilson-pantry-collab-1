@@ -5,7 +5,7 @@ namespace server.Service.FamilyServices
 {
     public interface IFamilyService
     {
-        public void CreateFamily(NewFamilyDTO newFamilyDTO);
+        public Family CreateFamily(NewFamilyDTO newFamilyDTO);
 
         public Family GetFamilyById(int Id); 
     }

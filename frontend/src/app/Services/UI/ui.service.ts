@@ -26,7 +26,8 @@ export class UIService {
 		"login_page": { Title: AppSettings.LoginPageTitle, Visible: false },
 		"registration_page": { Title: AppSettings.RegisterPageTitle, Visible: false },
 		"home_page": { Title: AppSettings.HomeTitle, Visible: false },
-		"admin": { Title: "Admin", Visible: false }
+		"admin": { Title: "Admin", Visible: false },
+		"registerFamily": { Title: "Register Family", Visible: false },
 	};
 
 	private _areas: Dictionary<boolean> = {

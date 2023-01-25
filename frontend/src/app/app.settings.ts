@@ -16,10 +16,15 @@ export class AppSettings{
     public static readonly API_AddPantyItems = "/api/Pantry/create"; 
 
     //recipe
-    public static readonly API_GetRecipes = "/api/Recipe/"
-    public static readonly API_AddRecipe = "/api/Recipe/create"
+    public static readonly API_GetRecipes = "/api/Recipe/";
+    public static readonly API_AddRecipe = "/api/Recipe/create";
 
+    //family
+    public static readonly API_AddFamily = "/api/Family/create"; 
+
+    //user
     public static readonly API_User = "/api/User"; 
+    public static readonly API_CreateUser = "/api/User/create"; 
 
     public static GetAPI(){
         return this.API_Endpoint + ":" + this.API_Port;

@@ -1,0 +1,19 @@
+<div class="outerWrapper">
+    <div class="innerWrapper">
+        <div *ngIf="this.warning !== ''">{{warning}}</div>
+        <label for="familyName">Family Name: </label>
+        <input id="familyName" [(ngModel)]="familyName" type="text">
+
+        <label for="firstName">FirstName Name: </label>
+        <input id="firstName" [(ngModel)]="firstName" type="text">
+
+        <label for="username">Username: </label>
+        <input id="username" [(ngModel)]="userName" type="text">
+
+        <label for="password">Password: </label>
+        <input id="password" [(ngModel)]="password" type="password">
+
+        <button (click)="cancel()">Cancel</button>
+        <button (click)="submit()">Submit</button>
+    </div>
+</div>
