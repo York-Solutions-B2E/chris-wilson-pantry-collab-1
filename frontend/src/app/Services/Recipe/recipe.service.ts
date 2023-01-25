@@ -17,4 +17,8 @@ export class RecipeService {
 
 	}
 
+	public getRecipies(id: number){
+		return this.http.get<Recipe[]>(this.endPoint + AppSettings.API_GetRecipes + `${id}`); 
+	}
+
 }

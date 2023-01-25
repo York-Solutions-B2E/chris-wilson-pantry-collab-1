@@ -1,0 +1,16 @@
+.block{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(167, 55, 55);
+    color: white; 
+    margin: 5px; 
+    border-radius: 5px;
+    border: 1px solid rgb(167, 55, 55);
+    float: left; 
+
+}
+
+.block:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}

@@ -9,7 +9,9 @@
         </div>
         <div id="Area">
             <app-recipes *ngIf="ui.getArea('recipes')"></app-recipes>
+            <app-recipe *ngIf="ui.getArea('recipe')"></app-recipe>
             <app-add-recipe *ngIf="ui.getArea('add_recipes')"></app-add-recipe>
+            <app-pantry *ngIf="ui.getArea('pantry')"></app-pantry>
         </div>
 
 

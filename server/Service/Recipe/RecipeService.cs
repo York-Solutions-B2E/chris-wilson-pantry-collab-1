@@ -65,5 +65,48 @@ namespace server.Service.RecipeService
 
 
         }
+
+        public List<RecipeDTO> GetRecipes(int familyId)
+        {
+            var query = from r in _context.Recipes
+                        where r.Family == familyId
+                        select new RecipeDTO
+                        {
+                            Id= r.Id,
+                            Name = r.Name,
+                            Description= r.Description,
+                            Servings= r.Servings,
+                            Directions= r.Directions,
+                            Family= familyId,
+
+                        };
+
+            List<RecipeDTO> recipes = query.ToList();
+
+            foreach (var recipe in recipes)
+            {
+                recipe.Ingredients = this.GetIngredientsFromRecipe(recipe.Id); 
+            }
+
+            return recipes; 
+
+
+        }
+
+        public List<RecipeIngredientDTO> GetIngredientsFromRecipe(int recipeId)
+        {
+            var query = from ri in _context.RecipeIngredients
+                        where ri.RecipeId == recipeId
+                        select new RecipeIngredientDTO()
+                        {
+                            IngredientId= ri.IngredientId,
+                           
+                            Amount = ri.Weight
+                        };
+
+            return query.ToList();
+
+
+        }
     }
 }

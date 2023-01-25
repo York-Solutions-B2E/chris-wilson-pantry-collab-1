@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using server.DataTransferObj;
+using server.Models;
 using server.Service.RecipeService;
 
 namespace server.Controllers
@@ -16,6 +17,7 @@ namespace server.Controllers
             _recipeService = recipeService;
         }
 
+        //create
         [HttpPost("create")]
         public IActionResult createRecipe(RecipeDTO recipe)
         {
@@ -24,6 +26,20 @@ namespace server.Controllers
                 _recipeService.CreateRecipe(recipe);
 
                 return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        //read
+        [HttpGet("{id}")]
+        public IActionResult getRecipe(int id)
+        {
+            try
+            {
+                return Ok(_recipeService.GetRecipes(id));
             }
             catch (Exception ex)
             {

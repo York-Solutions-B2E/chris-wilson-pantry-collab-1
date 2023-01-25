@@ -31,6 +31,7 @@ export class UIService {
 
 	private _areas: Dictionary<boolean> = {
 		"recipes": true,
+		"recipe": false,
 		"add_recipes": false,
 		"pantry": false,
 	}

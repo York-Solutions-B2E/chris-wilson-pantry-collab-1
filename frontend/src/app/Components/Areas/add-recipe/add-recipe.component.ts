@@ -77,14 +77,14 @@ export class AddRecipeComponent implements OnInit, OnDestroy{
 	public save() { 
 		this.loading = true; 
 
-		if(this.auth.currentUserValue){
+		if(this.auth.currentUserValue){//have to check for this to be happy
 			this.recipeService.createRecipe({
 			id: 0, 
 			name: this.recipeName, 
 			description: "", 
 			servings:0, 
 			directions: this.directions, 
-			family: this.auth.currentUserValue.familyId, //have to check for this to be happy
+			family: this.auth.currentUserValue.familyId, 
 			ingredients: this.Ingredients 
 		}).pipe(first()).subscribe({
 			next: response => {

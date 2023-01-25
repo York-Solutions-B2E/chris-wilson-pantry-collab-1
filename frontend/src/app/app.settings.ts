@@ -16,7 +16,7 @@ export class AppSettings{
     public static readonly API_AddPantyItems = "/api/Pantry/create"; 
 
     //recipe
-    public static readonly API_GetRecipes = "/api/Recipe"
+    public static readonly API_GetRecipes = "/api/Recipe/"
     public static readonly API_AddRecipe = "/api/Recipe/create"
 
     public static readonly API_User = "/api/User"; 
