@@ -26,7 +26,7 @@ export class AddIngredientDialogComponent {
 	public Ok() {
 		this.IngreService.AddIngredient({id: 0, name: this.name, description: this.desc, calories: this.calories}).pipe(first()).subscribe({
 			next: resp => {
-
+				this.dialogRef.close();
 			}, 
 			error: err => {
 				console.error(err)

@@ -19,6 +19,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { PantryComponent } from './Components/Areas/pantry/pantry.component';
 import { RecipeComponent } from './Components/Areas/recipe/recipe.component';
 import { RegisterFamilyComponent } from './Components/Views/register-family/register-family.component';
+import { AddUserToFamilyComponent } from './Components/add-user-to-family/add-user-to-family.component';
 
 
 
@@ -37,6 +38,7 @@ import { RegisterFamilyComponent } from './Components/Views/register-family/regi
     PantryComponent,
     RecipeComponent,
     RegisterFamilyComponent,
+    AddUserToFamilyComponent,
   ],
   imports: [
     BrowserModule,

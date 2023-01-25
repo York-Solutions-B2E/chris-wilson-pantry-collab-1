@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
 import { UIService } from 'src/app/Services/UI/ui.service';
+import {MatDialog} from '@angular/material/dialog';
+import { AddUserToFamilyComponent } from '../add-user-to-family/add-user-to-family.component';
 
 @Component({
 	selector: 'app-userbar',
@@ -9,7 +11,7 @@ import { UIService } from 'src/app/Services/UI/ui.service';
 })
 export class UserbarComponent {
 
-	constructor(private auth: AuthenticationService, private ui: UIService) {
+	constructor(private auth: AuthenticationService, private ui: UIService, private dialog: MatDialog) {
 		
 	}
 
@@ -25,5 +27,13 @@ export class UserbarComponent {
 
 	public addRecipe_btn(){
 		this.ui.setArea("add_recipes");
+	}
+
+	public AddUserToFamily(){
+		const dialogRef = this.dialog.open(AddUserToFamilyComponent);
+
+		dialogRef.afterClosed().subscribe(result => {
+			console.log(result);
+		});
 	}
 }

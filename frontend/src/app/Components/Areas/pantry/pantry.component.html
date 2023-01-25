@@ -1,1 +1,5 @@
-<p>pantry works!</p>
+<ul>
+    <li *ngFor="let item of pantryItems" >
+        {{getIngredientName(item.ingredient)}} -- {{item.amount}} grams.
+    </li>
+</ul>

@@ -2,6 +2,7 @@
 
 namespace server.Models
 {
+    //todo: change to pantryItems
     public class Pantry
     {
         public int Id { get; set; }

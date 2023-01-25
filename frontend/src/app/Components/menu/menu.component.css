@@ -6,11 +6,11 @@
 .btn {
 	align-items: stretch;
 	padding: 5px 10px;
-	background-color: darkgrey;
+	background-color: rgb(156, 56, 56);
 	cursor: pointer;
 }
 
 .btn:hover {
 
-	background-color: grey;
+	background-color: rgb(119, 32, 32);
 }

@@ -18,7 +18,7 @@ export class PantryService {
 	}
 
 	public inti(familyId: number): void{
-		this.http.get<Pantry[]>(this.endPoint + AppSettings.API_GetPantyItems + `${familyId}`).pipe(
+		this.http.get<Pantry[]>(this.endPoint + AppSettings.API_GetPantryItems + `${familyId}`).pipe(
 			first(),
 			map(response => {
 				console.log(response);
@@ -32,7 +32,11 @@ export class PantryService {
 	}
 
 	public addItemToPantry(pantry: Pantry){
-		return this.http.post(this.endPoint + AppSettings.API_AddPantyItems, pantry); 
+		return this.http.post(this.endPoint + AppSettings.API_AddPantryItems, pantry); 
+	}
+
+	public getPantryItems(familyId: number){
+		return this.http.get<Pantry[]>(this.endPoint + AppSettings.API_GetPantryItems + `${familyId}`); 
 	}
 
 

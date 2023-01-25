@@ -38,8 +38,8 @@ export class AddPantryItemDialogComponent {
 		let familyId = this.auth.currentUserValue?.familyId;
 		let item = this.ingredients?.find(x => x.id === this.selectedItem); 
 
-		if(item !== undefined && familyId !== undefined){
-			this.pantry.addItemToPantry({id:0, familyId:familyId, ingredient: item?.id || 0, amount: this.amountToAdd}).pipe(first()).subscribe({
+		if(item !== undefined && familyId !== undefined && item.id !== null){
+			this.pantry.addItemToPantry({id:0, familyId:familyId, ingredient: item?.id, amount: this.amountToAdd}).pipe(first()).subscribe({
 				next: resp => {
 					//item was added with out issue
 					this.dialogRef.close();
