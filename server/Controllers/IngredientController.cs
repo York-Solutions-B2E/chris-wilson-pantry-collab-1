@@ -9,11 +9,11 @@ namespace server.Controllers
     [Route("api/[controller]")]
     [ApiController]
     //[Authorize]
-    public class IngreController : ControllerBase
+    public class IngredientController : ControllerBase
     {
         private readonly IIngredientsService _IngredientsService; 
 
-        public IngreController(IIngredientsService IngredientsService)
+        public IngredientController(IIngredientsService IngredientsService)
         {
             this._IngredientsService = IngredientsService;
         }

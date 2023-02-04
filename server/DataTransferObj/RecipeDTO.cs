@@ -17,6 +17,8 @@ namespace server.DataTransferObj
 
         public int? Family { get; set; }
 
+        public int? Relationship { get; set; }
+
         public List<RecipeIngredientDTO>? Ingredients { get; set; }
     }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { first } from 'rxjs';
+
 
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
 import { UIService } from 'src/app/Services/UI/ui.service';
@@ -24,7 +26,8 @@ export class LoginComponent implements OnInit  {
 	constructor(
 		private auth: AuthenticationService,
 		private formBuilder: FormBuilder,
-		private ui: UIService
+		private ui: UIService, 
+		private router: Router
 		) {
 
 	}
@@ -35,14 +38,14 @@ export class LoginComponent implements OnInit  {
 	}
 
 
-	onSubmit(){
+	login(){
 		this.auth.login(
 			this.loginForm.controls.username.value || "",
 			this.loginForm.controls.password.value || ""
 		).pipe(first())
 		.subscribe({
 			next: response => {
-				 this.ui.setPage("home_page"); 
+				this.router.navigate([""]);   
 			}, 
 			error: error => {
 				console.error(error); 
@@ -51,7 +54,7 @@ export class LoginComponent implements OnInit  {
 	}
 
 	registerFamily(){
-		this.ui.setPage("registerFamily"); 
+		this.router.navigate(['/registration']);
 	}
 
 }

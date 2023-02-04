@@ -37,7 +37,6 @@ namespace server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -100,9 +99,6 @@ namespace server.Migrations
                     b.Property<decimal?>("Calories")
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -111,7 +107,29 @@ namespace server.Migrations
                     b.ToTable("Ingredients");
                 });
 
-            modelBuilder.Entity("server.Models.Pantry", b =>
+            modelBuilder.Entity("server.Models.LinkedRecipes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("FamilyId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecipeId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Relationship")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LinkedRecipes");
+                });
+
+            modelBuilder.Entity("server.Models.PantryItems", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -133,7 +151,7 @@ namespace server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pantries");
+                    b.ToTable("PantryItems");
                 });
 
             modelBuilder.Entity("server.Models.Recipe", b =>
@@ -150,7 +168,7 @@ namespace server.Migrations
                     b.Property<string>("Directions")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Family")
+                    b.Property<int?>("FamilyId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -160,6 +178,8 @@ namespace server.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FamilyId");
 
                     b.ToTable("Recipes");
                 });
@@ -257,6 +277,18 @@ namespace server.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserRoles");
+                });
+
+            modelBuilder.Entity("server.Models.Recipe", b =>
+                {
+                    b.HasOne("server.Models.Family", null)
+                        .WithMany("Recipes")
+                        .HasForeignKey("FamilyId");
+                });
+
+            modelBuilder.Entity("server.Models.Family", b =>
+                {
+                    b.Navigation("Recipes");
                 });
 #pragma warning restore 612, 618
         }

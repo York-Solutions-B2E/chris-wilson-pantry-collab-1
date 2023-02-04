@@ -3,6 +3,7 @@ import { AuthenticationService } from 'src/app/Services/Authtication/authenticat
 import { UIService } from 'src/app/Services/UI/ui.service';
 import {MatDialog} from '@angular/material/dialog';
 import { AddUserToFamilyComponent } from '../add-user-to-family/add-user-to-family.component';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-userbar',
@@ -11,7 +12,13 @@ import { AddUserToFamilyComponent } from '../add-user-to-family/add-user-to-fami
 })
 export class UserbarComponent {
 
-	constructor(private auth: AuthenticationService, private ui: UIService, private dialog: MatDialog) {
+	constructor(
+		private auth: AuthenticationService, 
+		private ui: UIService, 
+		private dialog: MatDialog, 
+		public router: Router
+		
+		) {
 		
 	}
 

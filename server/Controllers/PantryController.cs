@@ -11,7 +11,7 @@ namespace server.Controllers
     [Authorize]
     public class PantryController : ControllerBase
     {
-        private IPantryService _pantryService; 
+        private readonly IPantryService _pantryService; 
 
         public PantryController(IPantryService pantryService)
         {
@@ -23,7 +23,7 @@ namespace server.Controllers
         {
             try
             {
-                List<Pantry> pantry = this._pantryService.GetPantryItems(id);
+                List<PantryItems> pantry = this._pantryService.GetPantryItems(id);
 
                 return Ok(pantry);
             }
@@ -34,11 +34,11 @@ namespace server.Controllers
         }
 
         [HttpPost("create")]
-        public IActionResult AddItemToPantry(Pantry pantry)
+        public IActionResult AddItemToPantry(PantryItems pantryItems)
         {
             try
             {
-                _pantryService.AddItemToPantry(pantry);
+                _pantryService.AddItemToPantry(pantryItems);
 
                 return Ok();
             }

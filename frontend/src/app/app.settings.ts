@@ -8,8 +8,8 @@ export class AppSettings{
     public static readonly API_LoginEndPoint = "/api/Authentication/login";  
     
     //ingredients
-    public static readonly API_GetIngredient = "/api/Ingre";  
-    public static readonly API_AddIngredient = "/api/Ingre/create"; 
+    public static readonly API_GetIngredient = "/api/Ingredient";  
+    public static readonly API_AddIngredient = "/api/Ingredient/create"; 
     
     //pantryItems
     public static readonly API_GetPantryItems = "/api/Pantry/"; 

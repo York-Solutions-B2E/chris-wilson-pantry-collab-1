@@ -66,9 +66,8 @@ export class AuthenticationService {
 		let user = this.currentUserValue;
 
 		if (user) {
-			if (user.token && user.token.expires < new Date()) {
-				return true;
-			}
+	
+			return !!user.token && new Date(user.token.expires).getTime() > new Date().getTime(); 
 		}
 		return false;
 

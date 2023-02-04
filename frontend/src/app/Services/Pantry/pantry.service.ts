@@ -18,9 +18,10 @@ export class PantryService {
 	}
 
 	public inti(familyId: number): void{
-		this.http.get<Pantry[]>(this.endPoint + AppSettings.API_GetPantryItems + `${familyId}`).pipe(
+		this.http.get<Pantry[]>(`${this.endPoint}${AppSettings.API_GetPantryItems}${familyId}`).pipe(
 			first(),
 			map(response => {
+				
 				console.log(response);
 				this.PantryItems.next(response);
 

@@ -25,7 +25,6 @@ namespace server.Service.RecipeService
                     Description = recipe.Description,
                     Servings = recipe.Servings, 
                     Directions = recipe.Directions,
-                    Family= recipe.Family,
                 };
 
                 _context.Recipes?.Add(newRecipe); 
@@ -68,8 +67,10 @@ namespace server.Service.RecipeService
 
         public List<RecipeDTO> GetRecipes(int familyId)
         {
-            var query = from r in _context.Recipes
-                        where r.Family == familyId
+            var query = from lr in _context.LinkedRecipes
+                        join r in _context.Recipes on lr.RecipeId equals r.Id
+                        where lr.FamilyId == familyId
+
                         select new RecipeDTO
                         {
                             Id= r.Id,
@@ -77,7 +78,8 @@ namespace server.Service.RecipeService
                             Description= r.Description,
                             Servings= r.Servings,
                             Directions= r.Directions,
-                            Family= familyId,
+                            Relationship = lr.Relationship,
+                            Family= lr.FamilyId,
 
                         };
 

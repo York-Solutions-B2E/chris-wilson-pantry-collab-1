@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using server.Models;
+using System.Net.Http.Headers;
 
 namespace server.Controllers
 {
@@ -7,36 +9,49 @@ namespace server.Controllers
     [ApiController]
     public class ImageController : ControllerBase
     {
-        private readonly IWebHostEnvironment _environment;
-        public ImageController(IWebHostEnvironment environment)
+        //private readonly IWebHostEnvironment _environment;
+        public ImageController()
         {
-            _environment = environment;
+            //_environment = environment;
         }
 
-        //not my code...
-        [HttpPost("UploadFile")]
-        public string UploadImage([FromForm] IFormFile file)
+        [HttpPost]
+        public async Task<IActionResult> UploadImage([FromForm] ImageModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // getting file original name
-                string FileName = file.FileName;
+                var file = model.Image;
+                var folderName = Path.Combine("Images");
+                Console.WriteLine(folderName); 
+                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
 
-                // combining GUID to create unique name before saving in wwwroot
-                string uniqueFileName = Guid.NewGuid().ToString() + "_" + FileName;
+                if (file?.Length > 0)
+                {
+                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition)?.FileName?.Trim('"');
+                    var fullPath = Path.Combine(pathToSave, fileName);
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                }
 
-                // getting full path inside wwwroot/images
-                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/", FileName);
-
-                // copying file
-                file.CopyTo(new FileStream(imagePath, FileMode.Create));
-
-                return "File Uploaded Successfully";
+                return Ok();
             }
-            catch (Exception ex)
+            else
             {
-                return ex.Message;
+                return BadRequest();
             }
+        }
+
+        [HttpGet("{fileName}")]
+        public IActionResult GetImage(string fileName)
+        {
+ 
+            var pathToImageFolder = Path.Combine(Directory.GetCurrentDirectory(), Path.Combine("Images"));
+            var fullPath = Path.Combine(pathToImageFolder, fileName);
+
+            var image = System.IO.File.OpenRead(fullPath);
+            return File(image, "image/" + Path.GetExtension(fileName).ToLowerInvariant());
         }
 
     }

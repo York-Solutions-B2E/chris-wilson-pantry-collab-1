@@ -4,10 +4,10 @@ namespace server.Service.PantryServices
 {
     public interface IPantryService
     {
-        public void AddItemToPantry(Pantry pantry);
+        public void AddItemToPantry(PantryItems pantryItems);
 
 
-        public List<Pantry> GetPantryItems(int id);
+        public List<PantryItems> GetPantryItems(int id);
 
     }
 }

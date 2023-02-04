@@ -17,11 +17,11 @@ namespace server.Service.PantryServices
         }
 
         //create
-        public void AddItemToPantry(Pantry pantry)
+        public void AddItemToPantry(PantryItems pantryItems)
         {
             try
             {
-                _context.Pantries?.Add(pantry); 
+                _context.PantryItems?.Add(pantryItems); 
                 _context.SaveChanges();
 
 
@@ -39,11 +39,11 @@ namespace server.Service.PantryServices
         }
 
         //read
-        public List<Pantry> GetPantryItems(int id)
+        public List<PantryItems> GetPantryItems(int id)
         {
-            var query = from p in _context.Pantries
+            var query = from p in _context.PantryItems
                         where p.FamilyId == id
-                        select new Pantry()
+                        select new PantryItems()
                         {
                             Id= p.Id,
                             FamilyId= p.FamilyId,
@@ -51,7 +51,7 @@ namespace server.Service.PantryServices
                             Amount= p.Amount,
                             Expires= p.Expires
                         };
-            List<Pantry> pantries = query.ToList();
+            List<PantryItems> pantries = query.ToList();
 
             return pantries; 
         }

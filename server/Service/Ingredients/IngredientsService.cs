@@ -45,7 +45,6 @@ namespace server.Service.Ingredients
                         {
                             Id = i.Id,
                             Name = i.Name,
-                            Description= i.Description,
                             Calories= i.Calories,
                         };
 

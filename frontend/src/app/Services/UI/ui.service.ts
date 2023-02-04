@@ -53,10 +53,10 @@ export class UIService {
 console.log("...", this.isUserLoggedIn)
 		if (!this.isUserLoggedIn) {
 			//user isn't logged in
-			this.setPage("login_page");
+			//this.setPage("login_page");
 
 		} else {
-			this.setPage("home_page")
+			//this.setPage("home_page")
 
 		}
 

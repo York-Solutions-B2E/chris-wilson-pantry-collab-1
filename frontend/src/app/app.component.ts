@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
 	constructor(
 		public auth: AuthenticationService, 
-		public ui: UIService, 
+		//public ui: UIService, 
 		public pantryService: PantryService,
 		public ingredients: IngredService
 		) {
@@ -28,10 +28,10 @@ export class AppComponent implements OnInit {
 
 
 		
-		if(this.ui.isUserLoggedIn){
-			if(this.auth.currentUserValue !== null){
-				this.pantryService.inti(this.auth.currentUserValue?.familyId);
-			} 
-		}
+		// if(this.ui.isUserLoggedIn){
+		// 	if(this.auth.currentUserValue !== null){
+		// 		this.pantryService.inti(this.auth.currentUserValue?.familyId);
+		// 	} 
+		// }
 	}
 }

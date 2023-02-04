@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subject, Subscription, debounceTime, first } from 'rxjs';
+import { Component } from '@angular/core';
+import { Subscription, Subject, first, debounceTime } from 'rxjs';
 import { IngreDTO } from 'src/app/dto/IngreDTO';
 import { Ingredients } from 'src/app/Models/Ingredients';
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
@@ -9,12 +8,12 @@ import { RecipeService } from 'src/app/Services/Recipe/recipe.service';
 import { UIService } from 'src/app/Services/UI/ui.service';
 
 @Component({
-	selector: 'app-add-recipe',
-	templateUrl: './add-recipe.component.html',
-	styleUrls: ['./add-recipe.component.css']
+  selector: 'app-add-recipe',
+  templateUrl: './add-recipe.component.html',
+  styleUrls: ['./add-recipe.component.css']
 })
-export class AddRecipeComponent implements OnInit, OnDestroy{
-	public ingredientsList: IngreDTO[] = [];
+export class AddRecipeComponent {
+  public ingredientsList: IngreDTO[] = [];
 	private ingSub: Subscription | null = null; 
 	public recipeName = "";
 
@@ -85,7 +84,8 @@ export class AddRecipeComponent implements OnInit, OnDestroy{
 			servings:0, 
 			directions: this.directions, 
 			family: this.auth.currentUserValue.familyId, 
-			ingredients: this.Ingredients 
+			ingredients: this.Ingredients, 
+			relationship: 0
 		}).pipe(first()).subscribe({
 			next: response => {
 				this.loading = false; 
@@ -134,7 +134,7 @@ export class AddRecipeComponent implements OnInit, OnDestroy{
 		//fetch worked
 
 		//https://www.reddit.com/r/recipes/search?q=potatoes%20dog&restrict_sr=on&include_over_18=on&sort=relevance&t=all
-		//this.http.get(`https://api.reddit.com/r/recipes/search.json?q=${searchTerm}&sort=relevance&limit=15`).subscribe({
+		// this.http.get(`https://api.reddit.com/r/recipes/search.json?q=${searchTerm}&sort=relevance&limit=15`).subscribe({
 		// this.http.get(`https://api.reddit.com/r/popular.json`).subscribe({
 		// 	next: response => {
 		// 		console.log(response); 

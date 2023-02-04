@@ -8,5 +8,6 @@ export interface Recipe{
     servings: number;
     directions: string;
     family: number;
+    relationship: number; 
     ingredients: RecipeIngredient[];
 }

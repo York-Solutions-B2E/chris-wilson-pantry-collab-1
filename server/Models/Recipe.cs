@@ -15,7 +15,7 @@ namespace server.Models
 
         public string? Directions { get; set; }
 
-        [ForeignKey("Family")]
-        public int? Family { get; set; }
+        
+        
     }
 }

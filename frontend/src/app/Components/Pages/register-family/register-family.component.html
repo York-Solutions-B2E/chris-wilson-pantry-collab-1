@@ -17,3 +17,13 @@
         <button (click)="submit()">Submit</button>
     </div>
 </div>
+
+<form>
+    <div class="form-group">
+      <label for="imageInput">Upload Image:</label>
+      <input type="file" id="imageInput" (change)="onFileChange($event)" #fileInput>
+    </div>
+    <button type="submit" (click)="uploadImage()">Submit</button>
+  </form>
+
+  <img src="https://localhost:7103/api/Image/IMG_8319.JPG" alt="">

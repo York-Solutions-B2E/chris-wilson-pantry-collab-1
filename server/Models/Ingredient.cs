@@ -9,8 +9,6 @@ namespace server.Models
 
         public string? Name { get; set; }
 
-        public string? Description { get; set; }
-
         [Column(TypeName = "decimal(18, 4)")]
         public decimal? Calories { get; set; } //per gram
 
