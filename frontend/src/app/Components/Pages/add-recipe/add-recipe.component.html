@@ -12,10 +12,10 @@
         <input id="Recipe-Name" [(ngModel)]="recipeName" type="text" (ngModelChange)="inputChanged()">
 
 
-        <div>
+        <!-- <div>
             <mat-label>Add A Ingredient To Your Pantry</mat-label>
             <mat-select placeholder="Select An Ingredient" (selectionChange)="onSelected($event.value)">
-                <mat-option *ngFor="let item of IngreService.GetIngredients" [value]="item.id">
+                <mat-option *ngFor="let item of IngredientService.GetIngredients" [value]="item.id">
                     {{item.name}}
                 </mat-option>
             </mat-select>
@@ -23,6 +23,10 @@
             <input id="add-i-calories" [(ngModel)]="amountToAdd" type="number">
 
             <button (click)="addIngredient()">Add</button>
+        </div> -->
+
+        <div>
+            <button (click)="addIngredient()" >Add Ingredient</button> 
         </div>
 
         <div>

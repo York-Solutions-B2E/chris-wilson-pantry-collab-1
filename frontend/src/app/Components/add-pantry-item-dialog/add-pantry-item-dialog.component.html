@@ -1,6 +1,6 @@
 <mat-label>Add A Ingredient To Your Pantry</mat-label>
 <mat-select placeholder="Select An Ingredient" (selectionChange)="onSelected($event.value)">
-	<mat-option *ngFor="let item of IngreService.GetIngredients" [value]="item.id">
+	<mat-option *ngFor="let item of IngredientService.GetIngredients" [value]="item.id">
 		{{item.name}}
 	</mat-option>
 </mat-select>

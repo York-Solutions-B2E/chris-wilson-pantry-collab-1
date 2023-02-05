@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { first } from 'rxjs';
 import { Recipe } from 'src/app/Models/Recipe';
 import { RecipeCard } from 'src/app/Models/RecipeCard';
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
-import { IngredService } from 'src/app/Services/Ingredients/ingred.service';
+import { IngredientService } from 'src/app/Services/Ingredients/ingredient.service';
 import { RecipeService } from 'src/app/Services/Recipe/recipe.service';
 import { RecipeHandlerService } from 'src/app/Services/RecipeHandler/recipe-handler.service';
 import { UIService } from 'src/app/Services/UI/ui.service';
@@ -20,10 +21,11 @@ export class RecipesComponent implements OnInit, OnDestroy {
 
 	constructor(
 		public ui: UIService, 
-		public IngreService: IngredService, 
+		public IngredientService: IngredientService, 
 		private recipeService: RecipeService, 
 		private auth: AuthenticationService,
 		private recipeHandler: RecipeHandlerService,
+		private router: Router,
 		) {
 
 	}
@@ -47,6 +49,6 @@ export class RecipesComponent implements OnInit, OnDestroy {
 		this.recipeHandler.recipeHolder = recipe; 
 
 
-		this.ui.setArea("recipe"); 
+		this.router.navigate([""])
 	}
 }

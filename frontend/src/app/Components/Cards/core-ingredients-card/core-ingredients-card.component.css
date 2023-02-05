@@ -1,0 +1,15 @@
+.square-card {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+  }
+  
+  .square-card input[type="checkbox"] {
+    display: none;
+  }
+  
+  .square-card img {
+    width: 100%;
+    height: 100%;
+  }

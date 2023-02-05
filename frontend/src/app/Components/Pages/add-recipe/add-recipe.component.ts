@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { Subscription, Subject, first, debounceTime } from 'rxjs';
-import { IngreDTO } from 'src/app/dto/IngreDTO';
-import { Ingredients } from 'src/app/Models/Ingredients';
+
+
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
-import { IngredService } from 'src/app/Services/Ingredients/ingred.service';
+import { IngredientService } from 'src/app/Services/Ingredients/ingredient.service';
 import { RecipeService } from 'src/app/Services/Recipe/recipe.service';
 import { UIService } from 'src/app/Services/UI/ui.service';
+import {MatDialog} from '@angular/material/dialog';
+import { AddIngredientDialogComponent } from '../../add-ingredient-dialog/add-ingredient-dialog.component';
+import { CoreIngredient } from 'src/app/Models/CoreIngredient';
+import { RecipeIngredient } from 'src/app/Models/RecipeIngredient';
 
 @Component({
   selector: 'app-add-recipe',
@@ -13,13 +17,13 @@ import { UIService } from 'src/app/Services/UI/ui.service';
   styleUrls: ['./add-recipe.component.css']
 })
 export class AddRecipeComponent {
-  public ingredientsList: IngreDTO[] = [];
+  public ingredientsList: CoreIngredient[] = [];
 	private ingSub: Subscription | null = null; 
 	public recipeName = "";
 
-	public Servings = 4;
 
-	public Ingredients: Ingredients[] = [];
+
+	public Ingredients: RecipeIngredient[] = [];
 
 	public amountToAdd: number = 0;
 	public selectedItem: number = 0;
@@ -37,9 +41,10 @@ export class AddRecipeComponent {
 
 	constructor(
 		public ui: UIService, 
-		public IngreService: IngredService, 
+		public IngredientService: IngredientService, 
 		private recipeService: RecipeService, 
-		private auth: AuthenticationService
+		private auth: AuthenticationService,
+		private dialog: MatDialog, 
 		) {
 
 	}
@@ -50,9 +55,18 @@ export class AddRecipeComponent {
 		this.selectedItem = parseInt(id);
 	}
 
+	public addIngredient(){
+		const dialogRef = this.dialog.open(AddIngredientDialogComponent);
+
+		dialogRef.afterClosed().subscribe(result => {
+			console.log(result);
+		});
+
+	}
 
 
-	public addIngredient() {
+
+	public oldAddIngredient() {
 		//let Id = this.selectedItem;
 		let Amount = this.amountToAdd;
 
@@ -89,7 +103,7 @@ export class AddRecipeComponent {
 		}).pipe(first()).subscribe({
 			next: response => {
 				this.loading = false; 
-				this.ui.setArea("recipes")
+				//Todo: add navigation redirect
 			},
 			error: err => console.error(err)
 		})
@@ -101,7 +115,7 @@ export class AddRecipeComponent {
 	
 
 	ngOnInit(): void {
-		this.ingSub = this.IngreService.Ingredients.subscribe(response => this.ingredientsList = response);
+		this.ingSub = this.IngredientService.Ingredients.subscribe(response => this.ingredientsList = response);
 
 		this.subscription = this.modelChanged
 			.pipe(

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { AppSettings } from './app.settings';
 import { AuthenticationService } from './Services/Authtication/authentication.service';
-import { IngredService } from './Services/Ingredients/ingred.service';
+import { IngredientService } from './Services/Ingredients/ingredient.service';
 import { PantryService } from './Services/Pantry/pantry.service';
 import { UIService } from './Services/UI/ui.service';
 import { UserService } from './Services/User/user.service';
@@ -18,9 +18,16 @@ export class AppComponent implements OnInit {
 		public auth: AuthenticationService, 
 		//public ui: UIService, 
 		public pantryService: PantryService,
-		public ingredients: IngredService
+		public IngredientService: IngredientService
 		) {
-		
+		//check if user is still logged in and has a valid token
+		if (this.auth.currentUserValue !== null && new Date(this.auth.currentUserValue.token.expires) < new Date()) {
+			//token is expired
+			this.auth.LogOut();
+
+		}
+
+		this.IngredientService.init(); 
 		
 		
 	}

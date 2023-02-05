@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { first } from 'rxjs';
-import { IngredService } from 'src/app/Services/Ingredients/ingred.service';
+import { CoreIngredient } from 'src/app/Models/CoreIngredient';
+import { IngredientService } from 'src/app/Services/Ingredients/ingredient.service';
+import { CoreIngredientsCardComponent } from '../Cards/core-ingredients-card/core-ingredients-card.component';
 
 @Component({
 	selector: 'app-add-ingredient-dialog',
@@ -10,32 +12,37 @@ import { IngredService } from 'src/app/Services/Ingredients/ingred.service';
 })
 export class AddIngredientDialogComponent {
 
-	public loading = false;
+	public ingredientList: CoreIngredient[] = []; 
 
-	public name: string = "";
-	public desc: string = "";
-	public calories: number = 0;
+	selectedCards: CoreIngredientsCardComponent[] = [];
 
 	constructor(
+		//@Inject(MAT_DIALOG_DATA) public images: any,
 		public dialogRef: MatDialogRef<AddIngredientDialogComponent>,
-		public IngreService: IngredService
-	) {
+		private ingredientService: IngredientService
+		) {
+			this.ingredientList = this.ingredientService.GetIngredients; 
 
+			//console.log("ing", this.ingredientList); 
+		}
+  
+	onSelectionChange(cards: CoreIngredientsCardComponent[]) {
+	  this.selectedCards = cards;
+	  console.log(cards)
 	}
+  
+	closeDialog() {
+	  //this.selectedCards.close(this.selectedCards);
+	  this.dialogRef.close();
 
-	public Ok() {
-		this.IngreService.AddIngredient({id: 0, name: this.name, description: this.desc, calories: this.calories}).pipe(first()).subscribe({
-			next: resp => {
-				this.dialogRef.close();
-			}, 
-			error: err => {
-				console.error(err)
-			}
-		}); 
 	}
 
 	public Cancel() {
 		this.dialogRef.close();
+	}
+
+	public Ok(){
+
 	}
 
 }

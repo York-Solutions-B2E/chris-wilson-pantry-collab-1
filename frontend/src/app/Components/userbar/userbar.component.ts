@@ -24,16 +24,16 @@ export class UserbarComponent {
 
 	public logoff_btn(){
 		this.auth.LogOut(); 
-		this.ui.setPage("login_page"); 
+		this.router.navigate(["login"]);
 	}
 
 	public changeView(view:string){
-		this.ui.setArea(view);
+		
 	
 	}
 
 	public addRecipe_btn(){
-		this.ui.setArea("add_recipes");
+		
 	}
 
 	public AddUserToFamily(){

@@ -6,7 +6,7 @@ import { first } from 'rxjs';
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
 import { FamilyService } from 'src/app/Services/Family/family.service';
 import { ImagesService } from 'src/app/Services/Images/images.service';
-import { IngredService } from 'src/app/Services/Ingredients/ingred.service';
+import { IngredientService } from 'src/app/Services/Ingredients/ingredient.service';
 import { UIService } from 'src/app/Services/UI/ui.service';
 import { UserService } from 'src/app/Services/User/user.service';
 
@@ -36,7 +36,7 @@ export class RegisterFamilyComponent implements OnInit, OnDestroy {
 
 	constructor(
 		public ui: UIService,
-		public IngreService: IngredService,
+		public IngredientService: IngredientService,
 		private userService: UserService,
 		private familyService: FamilyService, 
 		private router: Router, 

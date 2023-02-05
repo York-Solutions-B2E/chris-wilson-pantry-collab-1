@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { first } from 'rxjs';
-import { IngreDTO } from 'src/app/dto/IngreDTO';
-import { Ingredients } from 'src/app/Models/Ingredients';
+import { CoreIngredient } from 'src/app/Models/CoreIngredient';
+
 import { Pantry } from 'src/app/Models/Pantry';
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
-import { IngredService } from 'src/app/Services/Ingredients/ingred.service';
+import { IngredientService } from 'src/app/Services/Ingredients/ingredient.service';
 import { PantryService } from 'src/app/Services/Pantry/pantry.service';
 import { RecipeService } from 'src/app/Services/Recipe/recipe.service';
 import { UIService } from 'src/app/Services/UI/ui.service';
@@ -17,11 +17,11 @@ import { UIService } from 'src/app/Services/UI/ui.service';
 export class PantryComponent implements OnInit, OnDestroy{
 
   public pantryItems: Pantry[] = []; 
-  public ingredients: IngreDTO[] = []; 
+  public ingredients: CoreIngredient[] = []; 
 
   constructor(
 		public ui: UIService, 
-		public IngreService: IngredService, 
+		public IngredientService: IngredientService, 
 		private pantryService: PantryService, 
 		private auth: AuthenticationService
 		) {}
@@ -38,7 +38,7 @@ export class PantryComponent implements OnInit, OnDestroy{
     });
     }
      
-    this.ingredients = this.IngreService.GetIngredients;
+    this.ingredients = this.IngredientService.GetIngredients;
   }
 
 

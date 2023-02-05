@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { UserbarComponent } from './Components/userbar/userbar.component';
 import { RecipesComponent } from './Components/Areas/recipes/recipes.component';
-import { RecipeCardComponent } from './Components/recipe-card/recipe-card.component';
+
 import { AddRecipeComponent } from './Components/Pages/add-recipe/add-recipe.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddIngredientDialogComponent } from './Components/add-ingredient-dialog/add-ingredient-dialog.component';
@@ -21,6 +21,8 @@ import { RecipeComponent } from './Components/Areas/recipe/recipe.component';
 import { RegisterFamilyComponent } from './Components/Pages/register-family/register-family.component';
 import { AddUserToFamilyComponent } from './Components/add-user-to-family/add-user-to-family.component';
 import { AppRoutingModule } from './appRoutingModule';
+import { CoreIngredientsCardComponent } from './Components/Cards/core-ingredients-card/core-ingredients-card.component';
+
 
 
 
@@ -32,7 +34,6 @@ import { AppRoutingModule } from './appRoutingModule';
     HomeComponent,
     UserbarComponent,
     RecipesComponent,
-    RecipeCardComponent,
     AddIngredientDialogComponent,
     AddPantryItemDialogComponent,
     PantryComponent,
@@ -40,6 +41,8 @@ import { AppRoutingModule } from './appRoutingModule';
     RegisterFamilyComponent,
     AddUserToFamilyComponent,
     AddRecipeComponent,
+    CoreIngredientsCardComponent,
+
   ],
   imports: [
     BrowserModule,
