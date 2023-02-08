@@ -43,5 +43,20 @@ namespace server.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("friend/{id}")]
+        public IActionResult GetFamilyFriends(int id)
+        {
+            try
+            {
+                List<FriendsDTO> friends = _familyService.GetFriends(id); 
+
+                return Ok(friends);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

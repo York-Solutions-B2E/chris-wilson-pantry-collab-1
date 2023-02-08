@@ -44,22 +44,50 @@ namespace server.Migrations
                     b.ToTable("Families");
                 });
 
-            modelBuilder.Entity("server.Models.Friend", b =>
+            modelBuilder.Entity("server.Models.Feed", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("DateCreated")
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("FamilyId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Posted")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FamilyId")
+                    b.Property<int?>("RecipeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("FriendID")
+                    b.HasKey("Id");
+
+                    b.ToTable("Feeds");
+                });
+
+            modelBuilder.Entity("server.Models.Friend", b =>
+                {
+                    b.Property<int?>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Family1_Id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Family2_Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

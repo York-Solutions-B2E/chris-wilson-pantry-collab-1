@@ -1,22 +1,5 @@
 
-
-
-
-
-
 #MainArea {
     width: 1440px;
-    display: flex;
-    flex-direction: row;
-}
-
-#Menu {
-    width: 15%;
-    height: 100vh;
-    background-color: rgb(128, 73, 0);
-}
-
-#Area {
-    width: 85%;
-    height: 100vh;
+    
 }

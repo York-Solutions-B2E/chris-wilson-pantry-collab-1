@@ -95,6 +95,27 @@ namespace server.Service.RecipeService
 
         }
 
+        public List<RecipeShort> GetRecipeShorts(int familyId)
+        {
+            var query = from lr in _context.LinkedRecipes
+                        join r in _context.Recipes on lr.RecipeId equals r.Id
+                        where lr.FamilyId == familyId
+
+                        select new RecipeShort
+                        {
+                            Id = r.Id,
+                            Name = r.Name,
+                            Description = r.Description,
+                            Relationship = lr.Relationship,
+                        };
+
+            List<RecipeShort> recipes = query.ToList();
+
+            
+
+            return recipes;
+        }
+
         public List<RecipeIngredientDTO> GetIngredientsFromRecipe(int recipeId)
         {
             var query = from ri in _context.RecipeIngredients

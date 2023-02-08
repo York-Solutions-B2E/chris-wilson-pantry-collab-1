@@ -7,6 +7,8 @@ namespace server.Service.FamilyServices
     {
         public Family CreateFamily(NewFamilyDTO newFamilyDTO);
 
-        public Family GetFamilyById(int Id); 
+        public Family GetFamilyById(int Id);
+
+        public List<FriendsDTO> GetFriends(int Id);
     }
 }

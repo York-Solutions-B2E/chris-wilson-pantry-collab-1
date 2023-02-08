@@ -1,3 +1,5 @@
+<app-userbar *ngIf="auth.IsLoggedIn()"></app-userbar>
+
 <div id="MainWrapper">
     <router-outlet></router-outlet>
 </div>

@@ -1,0 +1,17 @@
+
+
+  <div *ngIf="isLoading; else loaded">
+    <mat-spinner></mat-spinner>
+  </div>
+  <ng-template #loaded>
+
+    <div *ngIf="myFamily; else notFamily"></div>
+        <p>family-page works!</p>
+        {{familyId}}
+    <ng-template #notFamily>
+
+        not my family
+    </ng-template>
+    
+  </ng-template>
+  

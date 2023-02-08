@@ -19,6 +19,7 @@ namespace server.Data
         public DbSet<RecipeIngredient>? RecipeIngredients { get; set; }
         public DbSet<PantryItems>? PantryItems { get; set; }
         public DbSet<LinkedRecipes>? LinkedRecipes { get; set; }
+        public DbSet<Feed>? Feeds { get; set; }
 
 
        

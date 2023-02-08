@@ -72,6 +72,7 @@ builder.Services.AddTransient<IFamilyService, FamilyService>();
 builder.Services.AddTransient<IIngredientsService, IngredientsService>();
 builder.Services.AddTransient<IPantryService, PantryServices>();
 builder.Services.AddTransient<IRecipeService, RecipeService>();
+builder.Services.AddTransient<IFeedService, FeedService>();
 
 // For Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()

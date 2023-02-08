@@ -57,5 +57,27 @@ namespace server.Service.FamilyServices
             }
         }
 
+        public List<FriendsDTO> GetFriends(int Id)
+        {
+
+            var friends = _context.Friends?
+                .Where(f => f.Family1_Id == Id || f.Family2_Id == Id)
+                .Select(f => new FriendsDTO{ 
+                    Id = f.Id,
+                    SenderId = f.Family1_Id,
+                    ReciverId = f.Family2_Id,
+                    Status = f.Status
+                })
+                .ToList();
+
+            if(friends != null)
+            {
+                return friends;
+            }
+
+            throw new Exception("error getting friends"); 
+
+        }
+
     }
 }

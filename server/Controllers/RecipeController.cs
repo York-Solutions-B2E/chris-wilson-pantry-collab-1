@@ -34,12 +34,25 @@ namespace server.Controllers
         }
 
         //read
-        [HttpGet("{id}")]
+        [HttpGet("family/{id}")]
         public IActionResult getRecipe(int id)
         {
             try
             {
                 return Ok(_recipeService.GetRecipes(id));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("short/{id}")]
+        public IActionResult GetRecipeShort(int id)
+        {
+            try
+            {
+                return Ok(_recipeService.GetRecipeShorts(id));
             }
             catch (Exception ex)
             {

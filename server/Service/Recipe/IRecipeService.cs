@@ -8,7 +8,11 @@ namespace server.Service.RecipeService
 
         public List<RecipeDTO> GetRecipes(int familyId);
 
-        public List<RecipeIngredientDTO> GetIngredientsFromRecipe(int recipeId); 
+        public List<RecipeIngredientDTO> GetIngredientsFromRecipe(int recipeId);
+
+        public List<RecipeShort> GetRecipeShorts(int familyId);
+
+
 
     }
 }

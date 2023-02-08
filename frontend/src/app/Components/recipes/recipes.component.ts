@@ -31,7 +31,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
 	}
 	ngOnInit(): void {
 		if(this.auth.currentUserValue){
-			this.recipeService.getRecipies(this.auth.currentUserValue?.familyId).pipe(first()).subscribe({
+			this.recipeService.getRecipesByFamilyId(this.auth.currentUserValue?.familyId).pipe(first()).subscribe({
 				next: response => {
 					console.log(response)
 					this.recipies = response; 

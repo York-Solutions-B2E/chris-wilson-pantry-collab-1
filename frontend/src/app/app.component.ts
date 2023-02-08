@@ -4,6 +4,7 @@ import { AppSettings } from './app.settings';
 import { AuthenticationService } from './Services/Authtication/authentication.service';
 import { IngredientService } from './Services/Ingredients/ingredient.service';
 import { PantryService } from './Services/Pantry/pantry.service';
+import { RedditService } from './Services/reddit/reddit.service';
 import { UIService } from './Services/UI/ui.service';
 import { UserService } from './Services/User/user.service';
 
@@ -18,8 +19,11 @@ export class AppComponent implements OnInit {
 		public auth: AuthenticationService, 
 		//public ui: UIService, 
 		public pantryService: PantryService,
-		public IngredientService: IngredientService
+		public IngredientService: IngredientService,
+		public redditService: RedditService
 		) {
+			//redditService.getNewestRecipePosts();
+
 		//check if user is still logged in and has a valid token
 		if (this.auth.currentUserValue !== null && new Date(this.auth.currentUserValue.token.expires) < new Date()) {
 			//token is expired

@@ -16,7 +16,8 @@ export class AppSettings{
     public static readonly API_AddPantryItems = "/api/Pantry/create"; 
 
     //recipe
-    public static readonly API_GetRecipes = "/api/Recipe/";
+    public static readonly API_GetRecipes = "/api/Recipe/family/";
+    public static readonly API_GetRecipeShorts = "/api/Recipe/short/";
     public static readonly API_AddRecipe = "/api/Recipe/create";
 
     //family
@@ -25,6 +26,11 @@ export class AppSettings{
     //user
     public static readonly API_User = "/api/User"; 
     public static readonly API_CreateUser = "/api/User/create"; 
+
+    //feed 
+    public static readonly API_Feed = "/api/Feed";  
+
+    
 
     public static GetAPI(){
         return this.API_Endpoint + ":" + this.API_Port;
