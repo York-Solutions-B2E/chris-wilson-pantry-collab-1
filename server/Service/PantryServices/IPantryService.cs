@@ -6,8 +6,9 @@ namespace server.Service.PantryServices
     {
         public void AddItemToPantry(PantryItems pantryItems);
 
-
         public List<PantryItems> GetPantryItems(int id);
+
+        public void UpdatePantryItem(PantryItems pantryItems);
 
     }
 }

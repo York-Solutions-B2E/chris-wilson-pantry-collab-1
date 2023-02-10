@@ -1,0 +1,21 @@
+.ingredientInfo{
+    float: left;
+    width: 250px;
+    height: 500px;
+
+}
+
+.ingredients{
+   float: left;
+
+}
+
+.ingredientsCard{
+    height: 50px;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    background-color: lightblue;
+    float: left;
+}
+

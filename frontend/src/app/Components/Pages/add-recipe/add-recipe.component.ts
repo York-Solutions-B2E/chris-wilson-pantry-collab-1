@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription, Subject, first, debounceTime } from 'rxjs';
-
+import { MatOptionSelectionChange } from '@angular/material/core';
 
 import { AuthenticationService } from 'src/app/Services/Authtication/authentication.service';
 import { IngredientService } from 'src/app/Services/Ingredients/ingredient.service';
@@ -10,14 +10,18 @@ import {MatDialog} from '@angular/material/dialog';
 import { AddIngredientDialogComponent } from '../../add-ingredient-dialog/add-ingredient-dialog.component';
 import { CoreIngredient } from 'src/app/Models/CoreIngredient';
 import { RecipeIngredient } from 'src/app/Models/RecipeIngredient';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-recipe',
   templateUrl: './add-recipe.component.html',
   styleUrls: ['./add-recipe.component.css']
 })
-export class AddRecipeComponent {
+export class AddRecipeComponent implements OnInit {
   public ingredientsList: CoreIngredient[] = [];
+  public selectedIngredient: any; 
+  public ingredientAmount: number|null = null; 
+
 	private ingSub: Subscription | null = null; 
 	public recipeName = "";
 
@@ -35,9 +39,10 @@ export class AddRecipeComponent {
 	private subscription: Subscription | null = null;
 	private debounceTime = 1000; //wait for a second
 
-	
+	public ingredients: any[] = [];
+
 	//ui 
-	private loading = false; 
+	public isLoading = true; 
 
 	constructor(
 		public ui: UIService, 
@@ -45,6 +50,8 @@ export class AddRecipeComponent {
 		private recipeService: RecipeService, 
 		private auth: AuthenticationService,
 		private dialog: MatDialog, 
+		private ingredientService: IngredientService,
+		public router: Router,
 		) {
 
 	}
@@ -56,41 +63,26 @@ export class AddRecipeComponent {
 	}
 
 	public addIngredient(){
-		const dialogRef = this.dialog.open(AddIngredientDialogComponent);
-
-		dialogRef.afterClosed().subscribe(result => {
-			console.log(result);
+		this.ingredients.push({
+			ingredientId: this.selectedIngredient.id,
+			name: this.selectedIngredient.name,
+			amount: this.ingredientAmount
 		});
 
-	}
-
-
-
-	public oldAddIngredient() {
-		//let Id = this.selectedItem;
-		let Amount = this.amountToAdd;
-
-		let item = this.ingredientsList?.find(x => x.id === this.selectedItem);
-
-		if (item != undefined && item.id !== null) {
-			console.log(item)
-			this.Ingredients.push({ ingredientId: item?.id, name: item?.name, amount: this.amountToAdd });
-		}
-
-		//get the title and add the items to it and search reddit
-		let search = this.recipeName.split(" ");
-		this.Ingredients.forEach(x => {
-			search.push(x.name)
-		});  
-		this.searchReddit(search); 
-
+		//reset
+		this.selectedIngredient = null; 
+		this.ingredientAmount = null; 
 
 	}
+
+
+
 
 	public save() { 
-		this.loading = true; 
-
+		this.isLoading = true; 
+console.log("saving")
 		if(this.auth.currentUserValue){//have to check for this to be happy
+			
 			this.recipeService.createRecipe({
 			id: 0, 
 			name: this.recipeName, 
@@ -102,8 +94,15 @@ export class AddRecipeComponent {
 			relationship: 0
 		}).pipe(first()).subscribe({
 			next: response => {
-				this.loading = false; 
+				this.isLoading = false; 
+				console.log(response); 
 				//Todo: add navigation redirect
+				let navigationExtras: NavigationExtras = {
+					queryParams: {
+					  familyId: this.auth.currentUserValue?.familyId,
+					}
+				  };
+				  this.router.navigate(['/family'], navigationExtras);
 			},
 			error: err => console.error(err)
 		})
@@ -115,7 +114,13 @@ export class AddRecipeComponent {
 	
 
 	ngOnInit(): void {
-		this.ingSub = this.IngredientService.Ingredients.subscribe(response => this.ingredientsList = response);
+		// this.ingSub = this.IngredientService.Ingredients.subscribe(response => {
+		// 	this.ingredientsList = response
+		// 	//this.isLoading = false; 
+		// });
+		this.ingredientsList = this.IngredientService.GetIngredients; 
+		console.log(this.ingredientsList)
+		this.isLoading = false; 
 
 		this.subscription = this.modelChanged
 			.pipe(
@@ -125,6 +130,8 @@ export class AddRecipeComponent {
 				//console.log("searching for: ", this.recipeName.split(" "))
 				this.searchReddit(this.recipeName.split(" "));
 			});
+
+			//this.ingredients = [{ name: '', amount: '' }];
 	}
 
 	inputChanged() {
@@ -169,5 +176,11 @@ export class AddRecipeComponent {
 
 			});
 
+	}
+
+	public deleteIngredient(id: number){
+		console.log(id)
+		this.ingredients = this.ingredients.filter(ingredient => ingredient.ingredientId !== id);
+		console.log(this.ingredients) ;
 	}
 }

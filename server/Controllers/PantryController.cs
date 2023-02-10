@@ -47,5 +47,20 @@ namespace server.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut()]
+        public IActionResult UpdatePantryItem(PantryItems pantryItems)
+        {
+            try
+            {
+                _pantryService.UpdatePantryItem(pantryItems);
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

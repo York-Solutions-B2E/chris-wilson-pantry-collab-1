@@ -30,6 +30,17 @@ namespace server.Service.RecipeService
                 _context.Recipes?.Add(newRecipe); 
                 _context.SaveChanges();
 
+                //create the link
+                LinkedRecipes newLink = new LinkedRecipes
+                {
+                    FamilyId = recipe.Family,
+                    RecipeId = newRecipe.Id,
+                    Relationship = 0//0 is creator/owner
+                }; 
+
+                _context.LinkedRecipes?.Add(newLink);
+                _context.SaveChanges();
+
                 if(recipe.Ingredients != null)
                 {
                     foreach (var ingredient in recipe.Ingredients)

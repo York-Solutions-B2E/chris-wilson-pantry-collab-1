@@ -16,7 +16,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddIngredientDialogComponent } from './Components/add-ingredient-dialog/add-ingredient-dialog.component';
 import { AddPantryItemDialogComponent } from './Components/add-pantry-item-dialog/add-pantry-item-dialog.component';
 import {MatSelectModule} from '@angular/material/select';
-import { PantryComponent } from './Components/Areas/pantry/pantry.component';
+import { PantryComponent } from './Components/Pages/pantry/pantry.component';
 import { RecipeComponent } from './Components/recipe/recipe.component';
 import { RegisterFamilyComponent } from './Components/Pages/register-family/register-family.component';
 import { AddUserToFamilyComponent } from './Components/add-user-to-family/add-user-to-family.component';
@@ -25,9 +25,11 @@ import { CoreIngredientsCardComponent } from './Components/Cards/core-ingredient
 import { FeedItemComponent } from './Components/feed-item/feed-item.component';
 import { FamilyPageComponent } from './Components/Pages/family-page/family-page.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
-
-
+import { MatInputModule } from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { CommonModule } from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
+import { FriendRequestsComponent } from './Components/friend-requests/friend-requests.component'
 
 
 @NgModule({
@@ -47,6 +49,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     CoreIngredientsCardComponent,
     FeedItemComponent,
     FamilyPageComponent,
+    FriendRequestsComponent,
+
 
   ],
   imports: [
@@ -58,7 +62,12 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatDialogModule,
     MatSelectModule, 
     AppRoutingModule, 
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule, 
+    MatInputModule,
+    MatFormFieldModule, 
+    CommonModule,
+    MatIconModule,
+
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true } ],
   bootstrap: [AppComponent]

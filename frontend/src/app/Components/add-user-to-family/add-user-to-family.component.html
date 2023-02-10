@@ -1,18 +1,18 @@
-<div>
 
 
-    <div *ngIf="this.warning !== ''">{{warning}}</div>
 
-    
-    <label for="firstName">FirstName Name: </label>
-    <input id="firstName" [(ngModel)]="firstName" type="text">
-
-    <label for="username">Username: </label>
-    <input id="username" [(ngModel)]="userName" type="text">
-
-    <label for="password">Password: </label>
-    <input id="password" [(ngModel)]="password" type="password">
-
-    <button (click)="cancel()">Cancel</button>
-    <button (click)="submit()">Submit</button>
-</div>
+<div class="form-container">
+    <div *ngIf="this.warning !== ''" class="warning">{{warning}}</div>
+  
+    <label for="firstName" class="form-label">First Name: </label>
+    <input id="firstName" [(ngModel)]="firstName" type="text" class="form-input">
+  
+    <label for="username" class="form-label">Username: </label>
+    <input id="username" [(ngModel)]="userName" type="text" class="form-input">
+  
+    <label for="password" class="form-label">Password: </label>
+    <input id="password" [(ngModel)]="password" type="password" class="form-input">
+  
+    <button (click)="cancel()" class="form-button">Cancel</button>
+    <button (click)="submit()" class="form-button" [disabled]="submitting">Submit</button>
+  </div>

@@ -1,0 +1,19 @@
+<div class="ingredientInfo">
+    <div *ngIf="selectedIngredient !== null">
+
+        {{getIngredientName(selectedIngredient.ingredient)}}<input id="amount" [(ngModel)]="selectedIngredient.amount"
+            type="number" class="form-input">
+        <button (click)="updateIngredient()" [disabled]="updateButtonDisabled">Update</button>
+
+    </div>
+</div>
+
+<div class="ingredients">
+    <input [(ngModel)]="searchTerm" (input)="searchItems()" placeholder="Search">
+
+<div *ngFor="let item of displayedItems">
+
+    <div class="ingredientCard" (click)="selectIngredient(item)">{{getIngredientName(item.ingredient)}}</div>
+
+</div>
+</div>

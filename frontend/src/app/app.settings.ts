@@ -15,12 +15,15 @@ export class AppSettings{
     public static readonly API_GetPantryItems = "/api/Pantry/"; 
     public static readonly API_AddPantryItems = "/api/Pantry/create"; 
 
+
     //recipe
     public static readonly API_GetRecipes = "/api/Recipe/family/";
     public static readonly API_GetRecipeShorts = "/api/Recipe/short/";
     public static readonly API_AddRecipe = "/api/Recipe/create";
 
     //family
+    public static readonly API_Family = "/api/Family/"; 
+    public static readonly API_FamilyFriends = "/api/Family/friend/"; 
     public static readonly API_AddFamily = "/api/Family/create"; 
 
     //user

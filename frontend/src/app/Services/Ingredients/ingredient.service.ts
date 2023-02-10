@@ -12,44 +12,19 @@ import { UIService } from '../UI/ui.service';
 export class IngredientService {
 	public Ingredients: BehaviorSubject<CoreIngredient[]> = new BehaviorSubject<CoreIngredient[]>([]);
 
+	public loading = false; 
 
 
 	constructor(private http: HttpClient, private ui: UIService) {
 
-		//get the ingredients 
-		//this needs to only happen once so do it in the constructor 
-		// this.http.get<Ingredient[]>(this.endPoint + AppSettings.API_GetIngredient).pipe(
-		// 	first(),
-		// 	map(response => {
-		// 		console.log(response);
-		// 		this.Ingredients.next(response);
-
-		// 		//done loading the ingredients
-		// 		this.ui.loadingIngredients = false; 
-		// 		return response;
-		// 	})
-		// ).subscribe({
-		// 	error: error => console.error(error) 
-		// });
+	
 	}
 
-	public init() {
-		this.http.get<CoreIngredient[]>(AppSettings.GetAPI() + AppSettings.API_GetIngredient).pipe(
-			first()//there should only be one response
-		).subscribe({
-			next: response => {
-				//console.log(response);
-				this.Ingredients.next(response);
-
-				//done loading the ingredients
-				this.ui.loadingIngredients = false;
-			},
-
-			error: err => {
-				
-			}
-
-		});
+	public loadIngredients() {
+		console.log("loading list");
+		this.ui.loadingIngredients = true; 
+		
+		return this.http.get<CoreIngredient[]>(AppSettings.GetAPI() + AppSettings.API_GetIngredient)
 	}
 
 	public AddIngredient(ingredient: CoreIngredient) {

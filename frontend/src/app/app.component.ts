@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { first } from 'rxjs';
 import { AppSettings } from './app.settings';
 import { AuthenticationService } from './Services/Authtication/authentication.service';
 import { IngredientService } from './Services/Ingredients/ingredient.service';
@@ -15,9 +16,11 @@ import { UserService } from './Services/User/user.service';
 })
 export class AppComponent implements OnInit {
 
+	public isLoading = true; 
+
 	constructor(
 		public auth: AuthenticationService, 
-		//public ui: UIService, 
+		public ui: UIService, 
 		public pantryService: PantryService,
 		public IngredientService: IngredientService,
 		public redditService: RedditService
@@ -31,13 +34,33 @@ export class AppComponent implements OnInit {
 
 		}
 
-		this.IngredientService.init(); 
+		
 		
 		
 	}
 	ngOnInit(): void {
 
+		this.IngredientService.loadIngredients().pipe(
+			first()//there should only be one response
+		).subscribe({
+			next: response => {
+				console.log("got list ", response);
+				this.IngredientService.Ingredients.next(response); 
 
+
+				//done loading the ingredients
+				this.ui.loadingIngredients = false;
+				
+				this.isLoading = false; 
+
+
+			},
+
+			error: err => {
+				
+			}
+
+		});
 		
 		// if(this.ui.isUserLoggedIn){
 		// 	if(this.auth.currentUserValue !== null){

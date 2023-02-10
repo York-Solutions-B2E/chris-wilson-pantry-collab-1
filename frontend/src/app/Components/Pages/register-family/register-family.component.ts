@@ -46,7 +46,7 @@ export class RegisterFamilyComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		this.warning = "did work";
+		this.warning = "";
 	}
 	ngOnDestroy(): void {
 

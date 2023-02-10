@@ -21,7 +21,7 @@ namespace server.Service.PantryServices
         {
             try
             {
-                _context.PantryItems?.Add(pantryItems); 
+                _context.PantryItems?.Add(pantryItems);
                 _context.SaveChanges();
 
 
@@ -41,23 +41,51 @@ namespace server.Service.PantryServices
         //read
         public List<PantryItems> GetPantryItems(int id)
         {
-            var query = from p in _context.PantryItems
-                        where p.FamilyId == id
-                        select new PantryItems()
-                        {
-                            Id= p.Id,
-                            FamilyId= p.FamilyId,
-                            Ingredient = p.Ingredient,
-                            Amount= p.Amount,
-                            Expires= p.Expires
-                        };
-            List<PantryItems> pantries = query.ToList();
+            try
+            {
+                var query = from p in _context.PantryItems
+                            where p.FamilyId == id
+                            select new PantryItems()
+                            {
+                                Id = p.Id,
+                                FamilyId = p.FamilyId,
+                                Ingredient = p.Ingredient,
+                                Amount = p.Amount,
+                                Expires = p.Expires
+                            };
+                List<PantryItems> pantries = query.ToList();
 
-            return pantries; 
+                return pantries;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+
         }
 
         //update
+        public void UpdatePantryItem(PantryItems pantryItems)
+        {
+            try
+            {
+                if (_context.PantryItems != null)
+                {
+                    _context.PantryItems?.Update(pantryItems);
+                    _context.SaveChanges();
+                    return;
+                }
+                else
+                {
+                    throw new Exception("Database doesn't exist");
+                }
 
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
 
 
         //delete

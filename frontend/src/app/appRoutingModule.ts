@@ -5,14 +5,16 @@ import { AddRecipeComponent } from './Components/Pages/add-recipe/add-recipe.com
 import { FamilyPageComponent } from './Components/Pages/family-page/family-page.component';
 import { HomeComponent } from './Components/Pages/home/home.component';
 import { LoginComponent } from './Components/Pages/login/login.component';
+import { PantryComponent } from './Components/Pages/pantry/pantry.component';
 import { RegisterFamilyComponent } from './Components/Pages/register-family/register-family.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'registration', component: RegisterFamilyComponent },
-    { path: 'addrecipe', component: AddRecipeComponent },
-    { path: 'family', component: FamilyPageComponent },
+    { path: 'addrecipe', component: AddRecipeComponent, canActivate: [AuthGuard]  },
+    { path: 'family', component: FamilyPageComponent, canActivate: [AuthGuard]  },
+    { path: 'pantry', component: PantryComponent, canActivate: [AuthGuard]  },
 ]; 
 
 // configures NgModule imports and exports

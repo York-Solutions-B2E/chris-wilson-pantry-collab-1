@@ -1,17 +1,50 @@
+<div *ngIf="errorMsg">{{errorMsg}}</div>
 
-
-  <div *ngIf="isLoading; else loaded">
+<div *ngIf="isLoading; else loaded">
     <mat-spinner></mat-spinner>
-  </div>
-  <ng-template #loaded>
+</div>
+<ng-template #loaded>
+
+    
 
     <div *ngIf="myFamily; else notFamily"></div>
-        <p>family-page works!</p>
-        {{familyId}}
-    <ng-template #notFamily>
-
-        not my family
-    </ng-template>
     
-  </ng-template>
-  
+
+    <ng-template #notFamily>
+        <div *ngIf="friendshipStatus == 'accepted';">
+            <div>Your family and the {{family.familyName}}'s are friends</div> 
+        </div>
+
+        <div *ngIf="friendshipStatus == 'pending' && senderFriend">
+            Your family sent the {{family.familyName}}'s a friend request. Hopefully they will accept. 
+        </div>
+
+        <div *ngIf="friendshipStatus == 'pending' && recieverFriend">
+            The {{family.familyName}}'s sent you a friend request. You should accept it. 
+
+            <button (click)="acceptRequest()">Accept</button>
+            <button (click)="denyRequest()">Deny</button>
+        </div>
+
+        <div *ngIf="!recieverFriend && !senderFriend">
+            <div> Send the {{family.familyName}}'s a friend request</div>
+            <button (click)="sendFriendRequest()">Send</button>
+        </div>
+   
+        
+        
+    </ng-template>
+
+    <div id="MainArea">
+
+        <ng-container *ngFor="let r of recipes">
+            <div class="recipeBox" (click)="recipeClick(r)">
+                {{r.name}}<br />
+                {{r.description}}
+            </div>
+        </ng-container>
+
+
+    </div>
+
+</ng-template>

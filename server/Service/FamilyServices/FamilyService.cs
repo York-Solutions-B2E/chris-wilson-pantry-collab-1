@@ -65,7 +65,7 @@ namespace server.Service.FamilyServices
                 .Select(f => new FriendsDTO{ 
                     Id = f.Id,
                     SenderId = f.Family1_Id,
-                    ReciverId = f.Family2_Id,
+                    ReceiverId = f.Family2_Id,
                     Status = f.Status
                 })
                 .ToList();

@@ -40,5 +40,9 @@ export class PantryService {
 		return this.http.get<Pantry[]>(this.endPoint + AppSettings.API_GetPantryItems + `${familyId}`); 
 	}
 
+	public updatePantryItem(item: Pantry){
+		return this.http.put<Pantry[]>(this.endPoint + AppSettings.API_GetPantryItems, item); 
+	}
+
 
 }

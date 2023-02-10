@@ -1,5 +1,9 @@
 <p>Select Your Ingredients</p>
+<div>
+  <div *ngFor="let i of selectedIngredientList">
 
+  </div>
+</div>
 
 <app-core-ingredients-card 
 *ngFor="let ingredient of ingredientList" [ingredient] = ingredient (selectedCards)="onSelectionChange($event)"

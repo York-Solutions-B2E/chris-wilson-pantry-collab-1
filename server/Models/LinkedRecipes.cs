@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
 
-        public int FamilyId { get; set; }
+        public int? FamilyId { get; set; }
 
         public int RecipeId { get; set; }
 

@@ -1,56 +1,91 @@
-
-
-
-<div id="MainArea">
+<!-- <div id="MainArea">
     <h2>Create A New Recipe</h2>
-<div class="wrapper">
+    <div class="wrapper">
 
-    <div class="left">
-
-
-        <label for="Recipe-Name">Recipe Name</label>
-        <input id="Recipe-Name" [(ngModel)]="recipeName" type="text" (ngModelChange)="inputChanged()">
+        <div class="left">
 
 
-        <!-- <div>
-            <mat-label>Add A Ingredient To Your Pantry</mat-label>
-            <mat-select placeholder="Select An Ingredient" (selectionChange)="onSelected($event.value)">
-                <mat-option *ngFor="let item of IngredientService.GetIngredients" [value]="item.id">
-                    {{item.name}}
+            <label for="Recipe-Name">Recipe Name</label>
+            <input id="Recipe-Name" [(ngModel)]="recipeName" type="text" (ngModelChange)="inputChanged()">
+
+
+           
+
+            <div>
+                <button (click)="addIngredient()">Add Ingredient</button>
+            </div>
+
+            <div>
+                <ul>
+                    <li *ngFor="let item of Ingredients">{{item.name}} : {{item.amount}} grams</li>
+                </ul>
+
+                <textarea [(ngModel)]="directions" name="directions" id="directions" cols="30" rows="10"></textarea>
+            </div>
+
+            <button (click)="save()">Save Recipe</button>
+        </div>
+        <div>
+            reddit search:
+            <div *ngFor="let red of redditResults">
+                <a href="{{red.data.url}}" target="_blank">{{red.data.title}}</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div> -->
+<div *ngIf="isLoading; else loaded">
+    <mat-spinner></mat-spinner>
+</div>
+<ng-template #loaded>
+<h3>Add Recipe</h3>
+   
+      <div class="form-group">
+        <label for="recipeName">Recipe Name</label>
+        <input type="text" class="form-control" id="recipeName" [(ngModel)]="recipeName" name="recipeName">
+      </div>
+      <h4>Ingredients</h4>
+      <div>
+        <div mat-dialog-content>
+            <mat-form-field>
+              <mat-label>Select Ingredient</mat-label>
+              <mat-select [(ngModel)]="selectedIngredient">
+                <mat-option *ngFor="let ingredient of ingredientsList" [value]="ingredient">
+                  {{ingredient.name}}
                 </mat-option>
-            </mat-select>
-            <label for="add-i-calories">Calories Per Gram</label>
-            <input id="add-i-calories" [(ngModel)]="amountToAdd" type="number">
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput [(ngModel)]="ingredientAmount" placeholder="Amount">
+            </mat-form-field>
+          </div>
+          <mat-dialog-actions>
+            <button mat-button (click)="addIngredient()">Add</button>
+            <button mat-button mat-dialog-close>Cancel</button>
+          </mat-dialog-actions>
+      </div>
 
-            <button (click)="addIngredient()">Add</button>
-        </div> -->
+      <div *ngFor="let ingredient of ingredients">
+        {{ingredient.name}} {{ingredient.amount}} <div (click)="deleteIngredient(ingredient.ingredientId)">Delete</div>
+        
+      </div>
 
-        <div>
-            <button (click)="addIngredient()" >Add Ingredient</button> 
-        </div>
+      <mat-form-field>
+        <mat-label>Directions</mat-label>
+        <textarea matInput [(ngModel)]="directions" style="width: 500px;"></textarea>
+      </mat-form-field>
 
-        <div>
-            <ul>
-                <li *ngFor="let item of Ingredients">{{item.name}} : {{item.amount}} grams</li>
-            </ul>
-
-            <textarea [(ngModel)]="directions" name="directions" id="directions" cols="30" rows="10"></textarea>
-        </div>
-
-        <button (click)="save()">Save Recipe</button>
-    </div>
-    <div>
-        reddit search:
-        <div *ngFor="let red of redditResults">
-            <a href="{{red.data.url}}" target="_blank">{{red.data.title}}</a>
-
-        </div>
-    </div>
+      <button type="submit" class="btn btn-primary" (click)="save()">Save Recipe</button>
+    
+</ng-template>
 
 
-</div>
 
 
-</div>
+
 
 

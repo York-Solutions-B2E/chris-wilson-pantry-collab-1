@@ -1,0 +1,11 @@
+.recipeBox{
+    background-color: lightblue;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+}
+
+.recipeBox:hover{
+    cursor: pointer;
+    background-color: rgb(106, 141, 153);
+}

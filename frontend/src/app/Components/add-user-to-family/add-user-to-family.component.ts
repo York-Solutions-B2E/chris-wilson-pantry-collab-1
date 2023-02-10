@@ -14,6 +14,8 @@ import { UserService } from 'src/app/Services/User/user.service';
 })
 export class AddUserToFamilyComponent {
 
+  public submitting = false; //for when submitting the form
+
   public firstName: string = "";
   public userName: string = "";
   public password: string = "";
@@ -33,15 +35,32 @@ export class AddUserToFamilyComponent {
 
     let familyId = this.auth.currentUserValue?.familyId || 0; 
 
-    this.userService.createUser({ userName: this.userName, email: "", password: this.password, firstName: this.firstName, familyId: familyId }).pipe(first()).subscribe({
-      next: () => {
-        //account has been created
-        this.dialogRef.close();
-      },
-      error: err => {
-        this.warning = err;
-      }
-    });
+    if (!this.firstName || !this.userName || !this.password) {
+      this.warning = "All fields are required";
+    } else if (this.userName.length < 5) {
+      this.warning = "Username must be at least 5 characters long";
+    } else if (this.password.length < 8) {
+      this.warning = "Password must be at least 8 characters long";
+    } else {
+
+      //submit the data
+      this.submitting = true; 
+      this.userService.createUser({ userName: this.userName, email: "", password: this.password, firstName: this.firstName, familyId: familyId }).pipe(first()).subscribe({
+        next: () => {
+          //account has been created
+          this.dialogRef.close();
+        },
+        error: err => {
+          this.warning = err;
+        }
+      });
+
+
+      this.warning = '';
+    }
+
+
+    
   }
 
   public cancel(){
